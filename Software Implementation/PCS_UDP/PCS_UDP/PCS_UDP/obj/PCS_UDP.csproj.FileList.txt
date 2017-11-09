@@ -1,0 +1,12 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\PCS_UDP.Properties.Resources.resources
+obj\Debug\PCS_UDP.csproj.GenerateResource.Cache
+obj\Debug\PCS_UDP.TestClient.resources
+bin\Debug\PCS_UDP.exe
+bin\Debug\PCS_UDP.pdb
+bin\Debug\TinyNet.pdb
+bin\Debug\TinyNet.xml
+obj\Debug\PCS_UDP.exe
+obj\Debug\PCS_UDP.pdb
+obj\Debug\PCS_UDP.TestServer.resources
+obj\Debug\PCS_UDP.Start.resources

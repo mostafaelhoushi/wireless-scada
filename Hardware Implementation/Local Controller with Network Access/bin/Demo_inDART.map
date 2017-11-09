@@ -1,0 +1,2840 @@
+
+PROGRAM "C:\SofTec\StarterKits\AK-S12NE64-A\Samples\Demo\NE64_OpenTCP\bin\Demo_inDART.abs"
+
+*********************************************************************************************
+TARGET SECTION
+---------------------------------------------------------------------------------------------
+Processor   : Motorola HC12
+Memory Model: BANKED
+File Format : ELF\Dwarf 2.0
+Linker      : SmartLinker V-5.0.22 Build 4047, Feb 17 2004
+
+*********************************************************************************************
+FILE SECTION
+---------------------------------------------------------------------------------------------
+tcp.c.o                                 Model: BANKED,        Lang: ANSI-C
+arp.c.o                                 Model: BANKED,        Lang: ANSI-C
+ip.c.o                                  Model: BANKED,        Lang: ANSI-C
+ne64driver.c.o                          Model: BANKED,        Lang: ANSI-C
+http_server.c.o                         Model: BANKED,        Lang: ANSI-C
+udp.c.o                                 Model: BANKED,        Lang: ANSI-C
+https_callbacks.c.o                     Model: BANKED,        Lang: ANSI-C
+system.c.o                              Model: BANKED,        Lang: ANSI-C
+tftps.c.o                               Model: BANKED,        Lang: ANSI-C
+ne64api.c.o                             Model: BANKED,        Lang: ANSI-C
+icmp.c.o                                Model: BANKED,        Lang: ANSI-C
+timers.c.o                              Model: BANKED,        Lang: ANSI-C
+mBuf.c.o                                Model: BANKED,        Lang: ANSI-C
+Start12.c.o                             Model: BANKED,        Lang: ANSI-C
+RTI.c.o                                 Model: BANKED,        Lang: ANSI-C
+address.c.o                             Model: BANKED,        Lang: ANSI-C
+os.c.o                                  Model: BANKED,        Lang: ANSI-C
+Init.c.o                                Model: BANKED,        Lang: ANSI-C
+STRING.C.o (ansibi.lib)                 Model: BANKED,        Lang: ANSI-C
+rtshc12.c.o (ansibi.lib)                Model: BANKED,        Lang: ANSI-C
+Vectors.c.o                             Model: BANKED,        Lang: ANSI-C
+MC9S12NE64.c.o                          Model: BANKED,        Lang: ANSI-C
+main.c.o                                Model: BANKED,        Lang: ANSI-C
+Memory.c.o                              Model: BANKED,        Lang: ANSI-C
+ControlPanel.c.o                        Model: BANKED,        Lang: ANSI-C
+
+*********************************************************************************************
+STARTUP SECTION
+---------------------------------------------------------------------------------------------
+Entry point: 0x4000 (_Startup)
+_startupData is allocated at 0x401D and uses 24 Bytes
+extern struct _tagStartup {
+  unsigned flags          0
+  _PFunc   main           0x3CB42F    (main)
+  long     stackOffset    0x3FFF
+  unsigned nofZeroOut     1
+  _Range   pZeroOut       0x3200     2236
+  _Copy    *toCopyDownBeg 0x46A0
+  int      nofLibInits    0
+  _LibInit *libInits      0x4039
+  int      nofInitBodies  0
+  _Cpp     *initBodies    0x403B
+  int      nofFiniBodies  0
+  _Cpp     *finiBodies    0x403B
+} _startupData;
+
+*********************************************************************************************
+SECTION-ALLOCATION SECTION
+Section Name                    Size  Type     From       To       Segment
+---------------------------------------------------------------------------------------------
+.init                             29     R     0x4000     0x401C   ROM_4000
+.startData                        30     R     0x401D     0x403A   ROM_4000
+.rodata                          728     R     0x403B     0x4312   ROM_4000
+.rodata1                         162     R     0x4313     0x43B4   ROM_4000
+NON_BANKED                       747     R     0x43B5     0x469F   ROM_4000
+.copy                             11     R     0x46A0     0x46AA   ROM_4000
+.text                          16326     R   0x3C8000   0x3CBFC5   PAGE_3C
+.data                              5   R/W     0x3200     0x3204   RAM
+.abs_section_2000               1536   N/I     0x2000     0x25FF   .absSeg0
+.abs_section_2600               1536   N/I     0x2600     0x2BFF   .absSeg1
+.abs_section_2c00               1536   N/I     0x2C00     0x31FF   .absSeg2
+.abs_section_ff80                128     R     0xFF80     0xFFFF   .absSeg3
+.abs_section_3f                    1   N/I       0x3F       0x3F   .absSeg4
+.abs_section_86                    1   N/I       0x86       0x86   .absSeg5
+.abs_section_8b                    1   N/I       0x8B       0x8B   .absSeg6
+.abs_section_8a                    1   N/I       0x8A       0x8A   .absSeg7
+.abs_section_89                    1   N/I       0x89       0x89   .absSeg8
+.abs_section_41                    1   N/I       0x41       0x41   .absSeg9
+.abs_section_39                    1   N/I       0x39       0x39   .absSeg10
+.abs_section_3c                    1   N/I       0x3C       0x3C   .absSeg11
+.abs_section_37                    1   N/I       0x37       0x37   .absSeg12
+.abs_section_38                    1   N/I       0x38       0x38   .absSeg13
+.abs_section_20                    1   N/I       0x20       0x20   .absSeg14
+.abs_section_28                    1   N/I       0x28       0x28   .absSeg15
+.abs_section_29                    1   N/I       0x29       0x29   .absSeg16
+.abs_section_2a                    1   N/I       0x2A       0x2A   .absSeg17
+.abs_section_2d                    1   N/I       0x2D       0x2D   .absSeg18
+.abs_section_25                    1   N/I       0x25       0x25   .absSeg19
+.abs_section_24                    1   N/I       0x24       0x24   .absSeg20
+.abs_section_21                    1   N/I       0x21       0x21   .absSeg21
+.abs_section_9                     1   N/I        0x9        0x9   .absSeg22
+.abs_section_252                   1   N/I      0x252      0x252   .absSeg23
+.abs_section_25a                   1   N/I      0x25A      0x25A   .absSeg24
+.abs_section_262                   1   N/I      0x262      0x262   .absSeg25
+.abs_section_33                    1   N/I       0x33       0x33   .absSeg26
+.abs_section_26a                   1   N/I      0x26A      0x26A   .absSeg27
+.abs_section_24a                   1   N/I      0x24A      0x24A   .absSeg28
+.abs_section_242                   1   N/I      0x242      0x242   .absSeg29
+.abs_section_e                     1   N/I        0xE        0xE   .absSeg30
+.abs_section_120                   1   N/I      0x120      0x120   .absSeg31
+.abs_section_121                   1   N/I      0x121      0x121   .absSeg32
+.abs_section_122                   1   N/I      0x122      0x122   .absSeg33
+.abs_section_145                   1   N/I      0x145      0x145   .absSeg34
+.abs_section_100                   1   N/I      0x100      0x100   .absSeg35
+.abs_section_106                   1   N/I      0x106      0x106   .absSeg36
+.abs_section_103                   1   N/I      0x103      0x103   .absSeg37
+.abs_section_104                   1   N/I      0x104      0x104   .absSeg38
+.abs_section_101                   1   N/I      0x101      0x101   .absSeg39
+.abs_section_105                   1   N/I      0x105      0x105   .absSeg40
+.abs_section_1f                    1   N/I       0x1F       0x1F   .absSeg41
+.abs_section_e0                    1   N/I       0xE0       0xE0   .absSeg42
+.abs_section_e2                    1   N/I       0xE2       0xE2   .absSeg43
+.abs_section_e4                    1   N/I       0xE4       0xE4   .absSeg44
+.abs_section_e1                    1   N/I       0xE1       0xE1   .absSeg45
+.abs_section_e3                    1   N/I       0xE3       0xE3   .absSeg46
+.abs_section_11                    1   N/I       0x11       0x11   .absSeg47
+.abs_section_10                    1   N/I       0x10       0x10   .absSeg48
+.abs_section_1e                    1   N/I       0x1E       0x1E   .absSeg49
+.abs_section_15                    1   N/I       0x15       0x15   .absSeg50
+.abs_section_16                    1   N/I       0x16       0x16   .absSeg51
+.abs_section_156                   1   N/I      0x156      0x156   .absSeg52
+.abs_section_1c                    1   N/I       0x1C       0x1C   .absSeg53
+.abs_section_1d                    1   N/I       0x1D       0x1D   .absSeg54
+.abs_section_13                    1   N/I       0x13       0x13   .absSeg55
+.abs_section_b                     1   N/I        0xB        0xB   .absSeg56
+.abs_section_150                   1   N/I      0x150      0x150   .absSeg57
+.abs_section_151                   1   N/I      0x151      0x151   .absSeg58
+.abs_section_14                    1   N/I       0x14       0x14   .absSeg59
+.abs_section_17                    1   N/I       0x17       0x17   .absSeg60
+.abs_section_140                   1   N/I      0x140      0x140   .absSeg61
+.abs_section_43                    1   N/I       0x43       0x43   .absSeg62
+.abs_section_42                    1   N/I       0x42       0x42   .absSeg63
+.abs_section_60                    1   N/I       0x60       0x60   .absSeg64
+.abs_section_61                    1   N/I       0x61       0x61   .absSeg65
+.abs_section_1a                    1   N/I       0x1A       0x1A   .absSeg66
+.abs_section_1b                    1   N/I       0x1B       0x1B   .absSeg67
+.abs_section_a                     1   N/I        0xA        0xA   .absSeg68
+.abs_section_254                   1   N/I      0x254      0x254   .absSeg69
+.abs_section_25c                   1   N/I      0x25C      0x25C   .absSeg70
+.abs_section_264                   1   N/I      0x264      0x264   .absSeg71
+.abs_section_26c                   1   N/I      0x26C      0x26C   .absSeg72
+.abs_section_24c                   1   N/I      0x24C      0x24C   .absSeg73
+.abs_section_244                   1   N/I      0x244      0x244   .absSeg74
+.abs_section_256                   1   N/I      0x256      0x256   .absSeg75
+.abs_section_25e                   1   N/I      0x25E      0x25E   .absSeg76
+.abs_section_266                   1   N/I      0x266      0x266   .absSeg77
+.abs_section_257                   1   N/I      0x257      0x257   .absSeg78
+.abs_section_25f                   1   N/I      0x25F      0x25F   .absSeg79
+.abs_section_267                   1   N/I      0x267      0x267   .absSeg80
+.abs_section_3a                    1   N/I       0x3A       0x3A   .absSeg81
+.abs_section_8f                    1   N/I       0x8F       0x8F   .absSeg82
+.abs_section_8                     1   N/I        0x8        0x8   .absSeg83
+.abs_section_32                    1   N/I       0x32       0x32   .absSeg84
+.abs_section_30                    1   N/I       0x30       0x30   .absSeg85
+.abs_section_255                   1   N/I      0x255      0x255   .absSeg86
+.abs_section_25d                   1   N/I      0x25D      0x25D   .absSeg87
+.abs_section_265                   1   N/I      0x265      0x265   .absSeg88
+.abs_section_26d                   1   N/I      0x26D      0x26D   .absSeg89
+.abs_section_24d                   1   N/I      0x24D      0x24D   .absSeg90
+.abs_section_245                   1   N/I      0x245      0x245   .absSeg91
+.abs_section_250                   1   N/I      0x250      0x250   .absSeg92
+.abs_section_258                   1   N/I      0x258      0x258   .absSeg93
+.abs_section_251                   1   N/I      0x251      0x251   .absSeg94
+.abs_section_259                   1   N/I      0x259      0x259   .absSeg95
+.abs_section_261                   1   N/I      0x261      0x261   .absSeg96
+.abs_section_269                   1   N/I      0x269      0x269   .absSeg97
+.abs_section_249                   1   N/I      0x249      0x249   .absSeg98
+.abs_section_241                   1   N/I      0x241      0x241   .absSeg99
+.abs_section_260                   1   N/I      0x260      0x260   .absSeg100
+.abs_section_268                   1   N/I      0x268      0x268   .absSeg101
+.abs_section_248                   1   N/I      0x248      0x248   .absSeg102
+.abs_section_240                   1   N/I      0x240      0x240   .absSeg103
+.abs_section_c                     1   N/I        0xC        0xC   .absSeg104
+.abs_section_253                   1   N/I      0x253      0x253   .absSeg105
+.abs_section_25b                   1   N/I      0x25B      0x25B   .absSeg106
+.abs_section_d                     1   N/I        0xD        0xD   .absSeg107
+.abs_section_263                   1   N/I      0x263      0x263   .absSeg108
+.abs_section_26b                   1   N/I      0x26B      0x26B   .absSeg109
+.abs_section_24b                   1   N/I      0x24B      0x24B   .absSeg110
+.abs_section_243                   1   N/I      0x243      0x243   .absSeg111
+.abs_section_35                    1   N/I       0x35       0x35   .absSeg112
+.abs_section_3b                    1   N/I       0x3B       0x3B   .absSeg113
+.abs_section_143                   1   N/I      0x143      0x143   .absSeg114
+.abs_section_ca                    1   N/I       0xCA       0xCA   .absSeg115
+.abs_section_cb                    1   N/I       0xCB       0xCB   .absSeg116
+.abs_section_ce                    1   N/I       0xCE       0xCE   .absSeg117
+.abs_section_cf                    1   N/I       0xCF       0xCF   .absSeg118
+.abs_section_cc                    1   N/I       0xCC       0xCC   .absSeg119
+.abs_section_cd                    1   N/I       0xCD       0xCD   .absSeg120
+.abs_section_d2                    1   N/I       0xD2       0xD2   .absSeg121
+.abs_section_d3                    1   N/I       0xD3       0xD3   .absSeg122
+.abs_section_d6                    1   N/I       0xD6       0xD6   .absSeg123
+.abs_section_d7                    1   N/I       0xD7       0xD7   .absSeg124
+.abs_section_d4                    1   N/I       0xD4       0xD4   .absSeg125
+.abs_section_d5                    1   N/I       0xD5       0xD5   .absSeg126
+.abs_section_da                    1   N/I       0xDA       0xDA   .absSeg127
+.abs_section_d8                    1   N/I       0xD8       0xD8   .absSeg128
+.abs_section_d9                    1   N/I       0xD9       0xD9   .absSeg129
+.abs_section_dd                    1   N/I       0xDD       0xDD   .absSeg130
+.abs_section_db                    1   N/I       0xDB       0xDB   .absSeg131
+.abs_section_14e                   1   N/I      0x14E      0x14E   .absSeg132
+.abs_section_34                    1   N/I       0x34       0x34   .absSeg133
+.abs_section_48                    1   N/I       0x48       0x48   .absSeg134
+.abs_section_4a                    1   N/I       0x4A       0x4A   .absSeg135
+.abs_section_4e                    1   N/I       0x4E       0x4E   .absSeg136
+.abs_section_4f                    1   N/I       0x4F       0x4F   .absSeg137
+.abs_section_4c                    1   N/I       0x4C       0x4C   .absSeg138
+.abs_section_40                    1   N/I       0x40       0x40   .absSeg139
+.abs_section_46                    1   N/I       0x46       0x46   .absSeg140
+.abs_section_4d                    1   N/I       0x4D       0x4D   .absSeg141
+.abs_section_47                    1   N/I       0x47       0x47   .absSeg142
+.abs_section_144                   1   N/I      0x144      0x144   .absSeg143
+.abs_section_26e                   1   N/I      0x26E      0x26E   .absSeg144
+.abs_section_24e                   1   N/I      0x24E      0x24E   .absSeg145
+.abs_section_82                    2   N/I       0x82       0x83   .absSeg146
+.abs_section_84                    2   N/I       0x84       0x85   .absSeg147
+.abs_section_8c                    2   N/I       0x8C       0x8D   .absSeg148
+.abs_section_90                    2   N/I       0x90       0x91   .absSeg149
+.abs_section_92                    2   N/I       0x92       0x93   .absSeg150
+.abs_section_94                    2   N/I       0x94       0x95   .absSeg151
+.abs_section_96                    2   N/I       0x96       0x97   .absSeg152
+.abs_section_98                    2   N/I       0x98       0x99   .absSeg153
+.abs_section_9a                    2   N/I       0x9A       0x9B   .absSeg154
+.abs_section_9c                    2   N/I       0x9C       0x9D   .absSeg155
+.abs_section_9e                    2   N/I       0x9E       0x9F   .absSeg156
+.abs_section_158                   2   N/I      0x158      0x159   .absSeg157
+.abs_section_2b                    2   N/I       0x2B       0x2C   .absSeg158
+.abs_section_2e                    2   N/I       0x2E       0x2F   .absSeg159
+.abs_section_26                    2   N/I       0x26       0x27   .absSeg160
+.abs_section_22                    2   N/I       0x22       0x23   .absSeg161
+.abs_section_2                     2   N/I        0x2        0x3   .absSeg162
+.abs_section_16e                   2   N/I      0x16E      0x16F   .absSeg163
+.abs_section_146                   2   N/I      0x146      0x147   .absSeg164
+.abs_section_14a                   2   N/I      0x14A      0x14B   .absSeg165
+.abs_section_14c                   2   N/I      0x14C      0x14D   .absSeg166
+.abs_section_16c                   2   N/I      0x16C      0x16D   .absSeg167
+.abs_section_16a                   2   N/I      0x16A      0x16B   .absSeg168
+.abs_section_168                   2   N/I      0x168      0x169   .absSeg169
+.abs_section_166                   2   N/I      0x166      0x167   .absSeg170
+.abs_section_164                   2   N/I      0x164      0x165   .absSeg171
+.abs_section_162                   2   N/I      0x162      0x163   .absSeg172
+.abs_section_160                   2   N/I      0x160      0x161   .absSeg173
+.abs_section_154                   2   N/I      0x154      0x155   .absSeg174
+.abs_section_152                   2   N/I      0x152      0x153   .absSeg175
+.abs_section_62                    2   N/I       0x62       0x63   .absSeg176
+.abs_section_0                     2   N/I        0x0        0x1   .absSeg177
+.abs_section_148                   2   N/I      0x148      0x149   .absSeg178
+.abs_section_15a                   2   N/I      0x15A      0x15B   .absSeg179
+.abs_section_15c                   2   N/I      0x15C      0x15D   .absSeg180
+.abs_section_c8                    2   N/I       0xC8       0xC9   .absSeg181
+.abs_section_d0                    2   N/I       0xD0       0xD1   .absSeg182
+.abs_section_58                    2   N/I       0x58       0x59   .absSeg183
+.abs_section_5a                    2   N/I       0x5A       0x5B   .absSeg184
+.abs_section_5c                    2   N/I       0x5C       0x5D   .absSeg185
+.abs_section_5e                    2   N/I       0x5E       0x5F   .absSeg186
+.abs_section_44                    2   N/I       0x44       0x45   .absSeg187
+.abs_section_15e                   2   N/I      0x15E      0x15F   .absSeg188
+.bss                              12   R/W     0x3205     0x3210   RAM
+.common                         2219   R/W     0x3211     0x3ABB   RAM
+.stack                             1   R/W     0x3FFF     0x3FFF   .stackSeg
+
+Summary of section sizes per section type:
+READ_ONLY (R):        46F1 (dec:    18161)
+READ_WRITE (R/W):      8BD (dec:     2237)
+NO_INIT (N/I):        12E4 (dec:     4836)
+
+*********************************************************************************************
+VECTOR-ALLOCATION SECTION
+    Address     InitValue   InitFunction
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+OBJECT-ALLOCATION SECTION
+     Name               Module                 Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+MODULE:                 -- tcp.c.o --
+- PROCEDURES:
+     tcp_getsocket                           3C8000      71     113       4   .text       
+     tcp_listen                              3C8071      77     119       6   .text       
+     tcp_send                                3C80E8      85     133       6   .text       
+     tcp_close                               3C816D      94     148       4   .text       
+     tcp_getstate                            3C8201      18      24       2   .text       
+     tcp_checksend                           3C8219      30      48       2   .text       
+     tcp_abort                               3C8249      5F      95       2   .text       
+     tcp_poll                                3C82A8     2A0     672      33   .text       
+     tcp_init                                3C8548      78     120       2   .text       
+     process_tcp_in                          3C85C0     77E    1918     143   .text       
+     process_tcp_out                         3C8D3E     19E     414      16   .text       
+     tcp_sendcontrol                         3C8EDC      1F      31      10   .text       
+     tcp_sendreset                           3C8EFB      71     113       4   .text       
+     tcp_initseq                             3C8F6C       E      14       2   .text       
+     tcp_mapsocket                           3C8F7A      8A     138       2   .text       
+     tcp_newstate                            3C9004      64     100      44   .text       
+     tcp_check_cs                            3C9068     115     277       2   .text       
+- VARIABLES:
+     handle.1                                  3205       1       1       9   .bss        
+     received_tcp_packet                       3211      3F      63      83   .common     
+     tcp_socket                                3250     14D     333      13   .common     
+     tcp_tempbuf                               339D      15      21       3   .common     
+MODULE:                 -- arp.c.o --
+- PROCEDURES:
+     process_arp                             3C917D      52      82       2   .text       
+     arp_send_response                       3C91CF     158     344      13   .text       
+     arp_get_response                        3C9327      E8     232       4   .text       
+     arp_send_req                            3C940F      C5     197       4   .text       
+     arp_alloc                               3C94D4      8F     143       6   .text       
+     arp_add                                 3C9563      D4     212       5   .text       
+     arp_find                                3C9637     106     262       5   .text       
+     arp_manage                              3C973D      BE     190       2   .text       
+     arp_init                                3C97FB      64     100       2   .text       
+     is_subnet                               3C985F      3F      63       4   .text       
+- VARIABLES:
+     aenext.1                                  3200       1       1       5   .data       
+     aenext.2                                  3206       1       1       5   .bss        
+     arp_table                                 33B2      8C     140      11   .common     
+     arp_timer                                 343E       1       1       3   .common     
+MODULE:                 -- ip.c.o --
+- PROCEDURES:
+     process_ip_in                           3C989E     1C5     453      19   .text       
+     process_ip_out                          3C9A63     138     312       7   .text       
+     ip_construct_cs                         3C9B9B     145     325       2   .text       
+     ip_check_cs                             3C9CE0     162     354       2   .text       
+     ip_checksum                             3C9E42      47      71     184   .text       
+     ip_checksum_buf                         3C9E89      83     131      10   .text       
+- VARIABLES:
+     received_ip_packet                        343F      3F      63      45   .common     
+     send_ip_packet                            347E      3F      63      31   .common     
+     ip_id                                     34BD       2       2       2   .common     
+MODULE:                 -- ne64driver.c.o --
+- PROCEDURES:
+     EtherInit                               3C9F0C      CD     205       2   .text       
+     MIIwrite                                3C9FD9      45      69       4   .text       
+     MIIread                                 3CA01E      33      51       8   .text       
+     EtherOpen                               3CA051      82     130       2   .text       
+     EmacEnable                              3CA0D3       5       5       2   .text       
+     EmacControl                             3CA0D8       4       4       2   .text       
+     EtherType                               3CA0DC       B      11       2   .text       
+     EtherStartFrameTransmission             3CA0E7      31      49       2   .text       
+     UseSWLedRun                             3CA118      1A      26       2   .text       
+     ephy_isr                                  43B5      89     137       1   NON_BANKED  
+     emac_rx_fc_isr                            443E       7       7       1   NON_BANKED  
+     emac_b_rx_error_isr                       4445       7       7       1   NON_BANKED  
+     emac_rx_error_isr                         444C       7       7       1   NON_BANKED  
+     emac_rx_b_a_o_isr                         4453       7       7       1   NON_BANKED  
+     emac_rx_b_b_o_isr                         445A       7       7       1   NON_BANKED  
+     emac_rx_b_a_c_isr                         4461      19      25       1   NON_BANKED  
+     emac_rx_b_b_c_isr                         447A      19      25       1   NON_BANKED  
+     emac_mii_mtc_isr                          4493       1       1       1   NON_BANKED  
+     emac_lc_isr                               4494       B      11       1   NON_BANKED  
+     emac_ec_isr                               449F       B      11       1   NON_BANKED  
+     emac_f_tx_c_isr                           44AA       B      11       1   NON_BANKED  
+- VARIABLES:
+     emacFIFOa                                 2000     600    1536       1   .abs_section_2000
+     emacFIFOb                                 2600     600    1536       1   .abs_section_2600
+     emacFIFOtx                                2C00     600    1536       1   .abs_section_2c00
+     gotlink                                   34BF       1       1       4   .common     
+MODULE:                 -- http_server.c.o --
+- PROCEDURES:
+     https_init                              3CA132      7D     125       2   .text       
+     https_run                               3CA1AF     127     295       6   .text       
+     https_eventlistener                     3CA2D6     1D7     471      24   .text       
+     https_deletesession                     3CA4AD      2E      46       6   .text       
+     https_searchsession                     3CA4DB      29      41       2   .text       
+     https_bindsession                       3CA504      36      54       2   .text       
+     https_activatesession                   3CA53A      10      16       2   .text       
+- VARIABLES:
+     https_enabled                             3207       1       1       3   .bss        
+     ses.1                                     3208       1       1      15   .bss        
+     https                                     34C0      30      48      71   .common     
+MODULE:                 -- udp.c.o --
+- PROCEDURES:
+     udp_init                                3CA54A      2B      43       2   .text       
+     udp_getsocket                           3CA575      58      88       4   .text       
+     udp_open                                3CA5CD      2B      43       4   .text       
+     udp_send                                3CA5F8     1CC     460      17   .text       
+     process_udp_in                          3CA7C4     19C     412       3   .text       
+     udp_getfreeport                         3CA960      5B      91       2   .text       
+- VARIABLES:
+     lastport.1                                3201       2       2       7   .data       
+     udp_socket                                34F0      20      32       6   .common     
+     received_udp_packet                       3510       A      10      11   .common     
+MODULE:                 -- https_callbacks.c.o --
+- PROCEDURES:
+     https_findfile                          3CA9BB     14C     332       2   .text       
+     https_loadbuffer                        3CAB07      C9     201       5   .text       
+- VARIABLES:
+     https_not_found_page                      403B     213     531       2   .rodata     
+     STRING.WSD..SofTec.Microsys.1             4313      19      25       1   .rodata1    
+     STRING.index.html.2                       432C       B      11       1   .rodata1    
+     FAT_HEADER_ID                             3203       2       2       2   .data       
+MODULE:                 -- system.c.o --
+- PROCEDURES:
+     kick_WD                                 3CABD0       1       1      32   .text       
+- VARIABLES:
+     base_timer                                351A       4       4       1   .common     
+     net_buf                                   351E     400    1024      30   .common     
+MODULE:                 -- tftps.c.o --
+- PROCEDURES:
+     tftps_init                              3CABD1      55      85       2   .text       
+     tftps_run                               3CAC26      25      37       2   .text       
+     tftp_callback_write                     3CAC4B      14      20       3   .text       
+     tftps_eventlistener                     3CAC5F     214     532      31   .text       
+     tftps_sendack                           3CAE73      36      54       4   .text       
+     tftps_senderror                         3CAEA9      41      65       2   .text       
+     tftps_deletesocket                      3CAEEA      17      23       8   .text       
+- VARIABLES:
+     tftpsapp_init                             3209       1       1       4   .bss        
+     tftps                                     391E      11      17      55   .common     
+     tftp_addr                                 392F       4       4       8   .common     
+MODULE:                 -- ne64api.c.o --
+- PROCEDURES:
+     NE64InitializeOffsetToReadRxBuffer      3CAF01       C      12      22   .text       
+     NE64ReadByte                            3CAF0D      11      17      60   .text       
+     NE64ReadWord                            3CAF1E       A      10      18   .text       
+     NE64ReadBytes                           3CAF28      1D      29       6   .text       
+     NE64InitializeTransmissionBuffer        3CAF45      1B      27       6   .text       
+     NE64WriteEthernetHeaderToTxBuffer       3CAF60      46      70       6   .text       
+     NE64StartFrameTransmission              3CAFA6       5       5       6   .text       
+     NE64WriteByte                           3CAFAB      17      23      12   .text       
+     NE64WriteWord                           3CAFC2      13      19       8   .text       
+     NE64WriteBytes                          3CAFD5      1F      31       2   .text       
+     NE64Receive                             3CAFF4      2E      46       4   .text       
+     NE64ValidFrameReception                 3CB022       F      15       2   .text       
+     NE64FreeReceiveBuffer                   3CB031      25      37       2   .text       
+- VARIABLES:
+     pCurrentMBuf                              320A       2       2       8   .bss        
+     pCurrentSendMBuf                          320C       2       2       9   .bss        
+     received_frame                            3933      12      18       7   .common     
+     send_frame                                3945      12      18      13   .common     
+MODULE:                 -- icmp.c.o --
+- PROCEDURES:
+     process_icmp_in                         3CB056     14B     331       3   .text       
+- VARIABLES:
+MODULE:                 -- timers.c.o --
+- PROCEDURES:
+     timer_pool_init                         3CB1A1      24      36       2   .text       
+     get_timer                               3CB1C5      26      38       6   .text       
+     init_timer                              3CB1EB      38      56      22   .text       
+     check_timer                             3CB223      13      19       6   .text       
+     decrement_timers                        3CB236      3F      63       2   .text       
+- VARIABLES:
+     timer_pool                                3957     113     275      17   .common     
+MODULE:                 -- mBuf.c.o --
+- PROCEDURES:
+     mBufInit                                3CB275      2D      45       2   .text       
+     mENQUEUE                                3CB2A2      3A      58       2   .text       
+     mDEQUEUE                                3CB2DC      54      84       2   .text       
+- VARIABLES:
+     mBufs                                     3A6A      10      16      18   .common     
+     mBufTx                                    3A7A       8       8       5   .common     
+     enq_index                                 3A82       1       1       4   .common     
+     deq_index                                 3A83       1       1       5   .common     
+MODULE:                 -- Start12.c.o --
+- PROCEDURES:
+     Init                                    3CB330      29      41       2   .text       
+     _Startup                                  4000      1D      29       1   .init       
+- VARIABLES:
+     _startupData                              401D      18      24       6   .startData  
+MODULE:                 -- RTI.c.o --
+- PROCEDURES:
+     RTI_Init                                3CB359       C      12       2   .text       
+     RTI_Enable                              3CB365       8       8       2   .text       
+     RealTimeInterrupt                         44B5       F      15       1   NON_BANKED  
+- VARIABLES:
+     state.1                                   320E       1       1       2   .bss        
+MODULE:                 -- address.c.o --
+- PROCEDURES:
+- VARIABLES:
+     hard_addr                                 424E       6       6       1   .rodata     
+     prot_addr                                 4254       4       4       1   .rodata     
+     netw_mask                                 4258       4       4       1   .rodata     
+     dfgw_addr                                 425C       4       4       1   .rodata     
+MODULE:                 -- os.c.o --
+- PROCEDURES:
+     os_enter_critical_section               3CB36D       3       3       2   .text       
+     os_exit_critical_section                3CB370       3       3       2   .text       
+- VARIABLES:
+MODULE:                 -- Init.c.o --
+- PROCEDURES:
+     init                                    3CB373       1       1       2   .text       
+- VARIABLES:
+MODULE:                 -- STRING.C.o (ansibi.lib) --
+- PROCEDURES:
+     memcpy                                  3CB374      26      38       6   .text       
+     strlen                                  3CB39A      14      20       4   .text       
+     strcpy                                  3CB3AE      11      17       4   .text       
+     strcmp                                  3CB3BF      33      51       2   .text       
+     strncmp                                 3CB3F2      3D      61       4   .text       
+- VARIABLES:
+MODULE:                 -- rtshc12.c.o (ansibi.lib) --
+- PROCEDURES:
+     _BSHL                                     44C4       8       8       5   NON_BANKED  
+     _LCMP                                     44CC      19      25       3   NON_BANKED  
+     _LCMP_P                                   44E5      15      21       4   NON_BANKED  
+     _LINC                                     44FA       5       5      12   NON_BANKED  
+     _LDEC                                     44FF       8       8       1   NON_BANKED  
+     _LMUL                                     4507      27      39       1   NON_BANKED  
+     _lDivMod                                  452E      E3     227       1   NON_BANKED  
+     _LDIVU                                    4611       E      14       3   NON_BANKED  
+     _ILSEXT                                   461F       7       7       2   NON_BANKED  
+     _CASE_DIRECT_BYTE                         4626       5       5       2   NON_BANKED  
+     _CASE_CHECKED                             462B       B      11       3   NON_BANKED  
+     _CASE_CHECKED_BYTE                        4636      14      20       1   NON_BANKED  
+     _CASE_SEARCH_8                            464A      17      23       1   NON_BANKED  
+     _CASE_SEARCH_8_BYTE                       4661      1A      26       1   NON_BANKED  
+     _FPCMP                                    467B       8       8       3   NON_BANKED  
+- VARIABLES:
+MODULE:                 -- Vectors.c.o --
+- PROCEDURES:
+     software_trap                             4683       2       2      49   NON_BANKED  
+- VARIABLES:
+     _vect                                     FF80      80     128       0   .abs_section_ff80
+MODULE:                 -- MC9S12NE64.c.o --
+- PROCEDURES:
+- VARIABLES:
+     _ARMCOP                                     3F       1       1       0   .abs_section_3f
+     _ATDSTAT0                                   86       1       1       0   .abs_section_86
+     _ATDSTAT1                                   8B       1       1       1   .abs_section_8b
+     _ATDSTAT2                                   8A       1       1       0   .abs_section_8a
+     _ATDTEST1                                   89       1       1       0   .abs_section_89
+     _CFORC                                      41       1       1       0   .abs_section_41
+     _CLKSEL                                     39       1       1       3   .abs_section_39
+     _COPCTL                                     3C       1       1       0   .abs_section_3c
+     _CRGFLG                                     37       1       1       3   .abs_section_37
+     _CRGINT                                     38       1       1       2   .abs_section_38
+     _DBGC1                                      20       1       1       0   .abs_section_20
+     _DBGC2                                      28       1       1       0   .abs_section_28
+     _DBGC3                                      29       1       1       0   .abs_section_29
+     _DBGCAX                                     2A       1       1       0   .abs_section_2a
+     _DBGCBX                                     2D       1       1       0   .abs_section_2d
+     _DBGCCX                                     25       1       1       0   .abs_section_25
+     _DBGCNT                                     24       1       1       0   .abs_section_24
+     _DBGSC                                      21       1       1       0   .abs_section_21
+     _DDRE                                        9       1       1       0   .abs_section_9
+     _DDRG                                      252       1       1       0   .abs_section_252
+     _DDRH                                      25A       1       1       0   .abs_section_25a
+     _DDRJ                                      262       1       1       0   .abs_section_262
+     _DDRK                                       33       1       1       1   .abs_section_33
+     _DDRL                                      26A       1       1       6   .abs_section_26a
+     _DDRS                                      24A       1       1       1   .abs_section_24a
+     _DDRT                                      242       1       1       1   .abs_section_242
+     _EBICTL                                      E       1       1       0   .abs_section_e
+     _EPHYCTL0                                  120       1       1       5   .abs_section_120
+     _EPHYCTL1                                  121       1       1       1   .abs_section_121
+     _EPHYSR                                    122       1       1       1   .abs_section_122
+     _ETCTL                                     145       1       1       1   .abs_section_145
+     _FCLKDIV                                   100       1       1       0   .abs_section_100
+     _FCMD                                      106       1       1       0   .abs_section_106
+     _FCNFG                                     103       1       1       0   .abs_section_103
+     _FPROT                                     104       1       1       0   .abs_section_104
+     _FSEC                                      101       1       1       0   .abs_section_101
+     _FSTAT                                     105       1       1       0   .abs_section_105
+     _HPRIO                                      1F       1       1       0   .abs_section_1f
+     _IBAD                                       E0       1       1       0   .abs_section_e0
+     _IBCR                                       E2       1       1       0   .abs_section_e2
+     _IBDR                                       E4       1       1       0   .abs_section_e4
+     _IBFD                                       E1       1       1       0   .abs_section_e1
+     _IBSR                                       E3       1       1       0   .abs_section_e3
+     _INITRG                                     11       1       1       0   .abs_section_11
+     _INITRM                                     10       1       1       0   .abs_section_10
+     _INTCR                                      1E       1       1       1   .abs_section_1e
+     _ITCR                                       15       1       1       0   .abs_section_15
+     _ITEST                                      16       1       1       0   .abs_section_16
+     _MCMST                                     156       1       1       9   .abs_section_156
+     _MEMSIZ0                                    1C       1       1       0   .abs_section_1c
+     _MEMSIZ1                                    1D       1       1       0   .abs_section_1d
+     _MISC                                       13       1       1       0   .abs_section_13
+     _MODE                                        B       1       1       0   .abs_section_b
+     _MPADR                                     150       1       1       2   .abs_section_150
+     _MRADR                                     151       1       1       2   .abs_section_151
+     _MTST0                                      14       1       1       0   .abs_section_14
+     _MTST1                                      17       1       1       0   .abs_section_17
+     _NETCTL                                    140       1       1       2   .abs_section_140
+     _OC7D                                       43       1       1       0   .abs_section_43
+     _OC7M                                       42       1       1       1   .abs_section_42
+     _PACTL                                      60       1       1       0   .abs_section_60
+     _PAFLG                                      61       1       1       0   .abs_section_61
+     _PARTIDH                                    1A       1       1       0   .abs_section_1a
+     _PARTIDL                                    1B       1       1       0   .abs_section_1b
+     _PEAR                                        A       1       1       0   .abs_section_a
+     _PERG                                      254       1       1       1   .abs_section_254
+     _PERH                                      25C       1       1       1   .abs_section_25c
+     _PERJ                                      264       1       1       0   .abs_section_264
+     _PERL                                      26C       1       1       0   .abs_section_26c
+     _PERS                                      24C       1       1       0   .abs_section_24c
+     _PERT                                      244       1       1       0   .abs_section_244
+     _PIEG                                      256       1       1       0   .abs_section_256
+     _PIEH                                      25E       1       1       0   .abs_section_25e
+     _PIEJ                                      266       1       1       0   .abs_section_266
+     _PIFG                                      257       1       1       0   .abs_section_257
+     _PIFH                                      25F       1       1       0   .abs_section_25f
+     _PIFJ                                      267       1       1       0   .abs_section_267
+     _PLLCTL                                     3A       1       1       3   .abs_section_3a
+     _PORTAD1                                    8F       1       1       0   .abs_section_8f
+     _PORTE                                       8       1       1       0   .abs_section_8
+     _PORTK                                      32       1       1       4   .abs_section_32
+     _PPAGE                                      30       1       1       0   .abs_section_30
+     _PPSG                                      255       1       1       1   .abs_section_255
+     _PPSH                                      25D       1       1       1   .abs_section_25d
+     _PPSJ                                      265       1       1       0   .abs_section_265
+     _PPSL                                      26D       1       1       0   .abs_section_26d
+     _PPSS                                      24D       1       1       0   .abs_section_24d
+     _PPST                                      245       1       1       0   .abs_section_245
+     _PTG                                       250       1       1       3   .abs_section_250
+     _PTH                                       258       1       1       1   .abs_section_258
+     _PTIG                                      251       1       1       0   .abs_section_251
+     _PTIH                                      259       1       1       0   .abs_section_259
+     _PTIJ                                      261       1       1       0   .abs_section_261
+     _PTIL                                      269       1       1       0   .abs_section_269
+     _PTIS                                      249       1       1       0   .abs_section_249
+     _PTIT                                      241       1       1       0   .abs_section_241
+     _PTJ                                       260       1       1       0   .abs_section_260
+     _PTL                                       268       1       1      33   .abs_section_268
+     _PTS                                       248       1       1      13   .abs_section_248
+     _PTT                                       240       1       1       5   .abs_section_240
+     _PUCR                                        C       1       1       0   .abs_section_c
+     _RDRG                                      253       1       1       0   .abs_section_253
+     _RDRH                                      25B       1       1       0   .abs_section_25b
+     _RDRIV                                       D       1       1       0   .abs_section_d
+     _RDRJ                                      263       1       1       0   .abs_section_263
+     _RDRL                                      26B       1       1       0   .abs_section_26b
+     _RDRS                                      24B       1       1       0   .abs_section_24b
+     _RDRT                                      243       1       1       0   .abs_section_243
+     _REFDV                                      35       1       1       1   .abs_section_35
+     _RTICTL                                     3B       1       1       2   .abs_section_3b
+     _RXCTS                                     143       1       1       1   .abs_section_143
+     _SCI0CR1                                    CA       1       1       0   .abs_section_ca
+     _SCI0CR2                                    CB       1       1       0   .abs_section_cb
+     _SCI0DRH                                    CE       1       1       0   .abs_section_ce
+     _SCI0DRL                                    CF       1       1       0   .abs_section_cf
+     _SCI0SR1                                    CC       1       1       0   .abs_section_cc
+     _SCI0SR2                                    CD       1       1       0   .abs_section_cd
+     _SCI1CR1                                    D2       1       1       0   .abs_section_d2
+     _SCI1CR2                                    D3       1       1       0   .abs_section_d3
+     _SCI1DRH                                    D6       1       1       0   .abs_section_d6
+     _SCI1DRL                                    D7       1       1       0   .abs_section_d7
+     _SCI1SR1                                    D4       1       1       0   .abs_section_d4
+     _SCI1SR2                                    D5       1       1       0   .abs_section_d5
+     _SPIBR                                      DA       1       1       7   .abs_section_da
+     _SPICR1                                     D8       1       1       1   .abs_section_d8
+     _SPICR2                                     D9       1       1       1   .abs_section_d9
+     _SPIDR                                      DD       1       1       4   .abs_section_dd
+     _SPISR                                      DB       1       1       4   .abs_section_db
+     _SWRST                                     14E       1       1       1   .abs_section_14e
+     _SYNR                                       34       1       1       1   .abs_section_34
+     _TCTL1                                      48       1       1       1   .abs_section_48
+     _TCTL3                                      4A       1       1       0   .abs_section_4a
+     _TFLG1                                      4E       1       1       1   .abs_section_4e
+     _TFLG2                                      4F       1       1       0   .abs_section_4f
+     _TIE                                        4C       1       1       2   .abs_section_4c
+     _TIOS                                       40       1       1       1   .abs_section_40
+     _TSCR1                                      46       1       1       1   .abs_section_46
+     _TSCR2                                      4D       1       1       1   .abs_section_4d
+     _TTOV                                       47       1       1       1   .abs_section_47
+     _TXCTS                                     144       1       1       3   .abs_section_144
+     _WOML                                      26E       1       1       0   .abs_section_26e
+     _WOMS                                      24E       1       1       0   .abs_section_24e
+     _ATDCTL23                                   82       2       2       2   .abs_section_82
+     _ATDCTL45                                   84       2       2       2   .abs_section_84
+     _ATDDIEN                                    8C       2       2       0   .abs_section_8c
+     _ATDDR0                                     90       2       2       1   .abs_section_90
+     _ATDDR1                                     92       2       2       0   .abs_section_92
+     _ATDDR2                                     94       2       2       0   .abs_section_94
+     _ATDDR3                                     96       2       2       0   .abs_section_96
+     _ATDDR4                                     98       2       2       0   .abs_section_98
+     _ATDDR5                                     9A       2       2       0   .abs_section_9a
+     _ATDDR6                                     9C       2       2       0   .abs_section_9c
+     _ATDDR7                                     9E       2       2       0   .abs_section_9e
+     _BUFCFG                                    158       2       2       5   .abs_section_158
+     _DBGCA                                      2B       2       2       0   .abs_section_2b
+     _DBGCB                                      2E       2       2       0   .abs_section_2e
+     _DBGCC                                      26       2       2       0   .abs_section_26
+     _DBGTB                                      22       2       2       0   .abs_section_22
+     _DDRAB                                       2       2       2       1   .abs_section_2
+     _EMAC_MISC                                 16E       2       2       0   .abs_section_16e
+     _ETYPE                                     146       2       2       1   .abs_section_146
+     _IEVENT                                    14A       2       2      16   .abs_section_14a
+     _IMASK                                     14C       2       2      11   .abs_section_14c
+     _MACAD0                                    16C       2       2       0   .abs_section_16c
+     _MACAD1                                    16A       2       2       0   .abs_section_16a
+     _MACAD2                                    168       2       2       1   .abs_section_168
+     _MCHASH0                                   166       2       2       0   .abs_section_166
+     _MCHASH1                                   164       2       2       0   .abs_section_164
+     _MCHASH2                                   162       2       2       0   .abs_section_162
+     _MCHASH3                                   160       2       2       0   .abs_section_160
+     _MRDATA                                    154       2       2       1   .abs_section_154
+     _MWDATA                                    152       2       2       1   .abs_section_152
+     _PACNT                                      62       2       2       0   .abs_section_62
+     _PORTAB                                      0       2       2       5   .abs_section_0
+     _PTIME                                     148       2       2       0   .abs_section_148
+     _RXAEFP                                    15A       2       2       1   .abs_section_15a
+     _RXBEFP                                    15C       2       2       1   .abs_section_15c
+     _SCI0BD                                     C8       2       2       0   .abs_section_c8
+     _SCI1BD                                     D0       2       2       0   .abs_section_d0
+     _TC4                                        58       2       2      11   .abs_section_58
+     _TC5                                        5A       2       2      11   .abs_section_5a
+     _TC6                                        5C       2       2       0   .abs_section_5c
+     _TC7                                        5E       2       2       1   .abs_section_5e
+     _TCNT                                       44       2       2       1   .abs_section_44
+     _TXEFP                                     15E       2       2       1   .abs_section_15e
+MODULE:                 -- main.c.o --
+- PROCEDURES:
+     main                                    3CB42F     184     388       2   .text       
+- VARIABLES:
+     LEDcounter                                320F       2       2       3   .bss        
+     localmachine                              3A84      12      18      57   .common     
+MODULE:                 -- Memory.c.o --
+- PROCEDURES:
+     init_serial_memories                    3CB5B3      1F      31       2   .text       
+     flash_spi                               3CB5D2      11      17      22   .text       
+     flash_wre                               3CB5E3       F      15       4   .text       
+     flash_wait_WIP                          3CB5F2      1E      30       4   .text       
+     flash_bulk_erase                        3CB610      17      23       4   .text       
+     flash_program                           3CB627      7B     123       4   .text       
+     flash_read                              3CB6A2      4C      76       2   .text       
+     flash_read_buffer                       3CB6EE      3D      61       6   .text       
+     eeprom_spi                              3CB72B      11      17      22   .text       
+     eeprom_wre                              3CB73C       F      15       4   .text       
+     eeprom_wait_WIP                         3CB74B      1E      30       4   .text       
+     eeprom_unlock                           3CB769      24      36       2   .text       
+     eeprom_read_buffer                      3CB78D      48      72      10   .text       
+     eeprom_write_buffer                     3CB7D5      7C     124      10   .text       
+- VARIABLES:
+MODULE:                 -- ControlPanel.c.o --
+- PROCEDURES:
+     AK_HCS12NE_Init                         3CB851      5C      92       2   .text       
+     AdcRead                                 3CB8AD      29      41       6   .text       
+     ReadTemperature                         3CB8D6      22      34       2   .text       
+     SetSpeakerParameters                    3CB8F8      11      17       4   .text       
+     SetMotorParameters                      3CB909      ED     237       6   .text       
+     send_ack_data                           3CB9F6       B      11      18   .text       
+     send_nack                               3CBA01       E      14       8   .text       
+     send_bool_data                          3CBA0F      16      22      14   .text       
+     send_dec_data                           3CBA25      9C     156      15   .text       
+     get_8bit_data                           3CBAC1      66     102      26   .text       
+     get_bool_data                           3CBB27      1D      29       8   .text       
+     cmd_sld                                 3CBB44      36      54       2   .text       
+     cmd_gld                                 3CBB7A      19      25       2   .text       
+     cmd_gsw                                 3CBB93      29      41       2   .text       
+     cmd_gpt                                 3CBBBC       F      15       2   .text       
+     cmd_gpb                                 3CBBCB      21      33       2   .text       
+     cmd_gtp                                 3CBBEC       E      14       2   .text       
+     cmd_gms                                 3CBBFA       D      13       2   .text       
+     cmd_sms                                 3CBC07      13      19       2   .text       
+     cmd_gmd                                 3CBC1A       A      10       2   .text       
+     cmd_smd                                 3CBC24      13      19       2   .text       
+     cmd_gme                                 3CBC37       A      10       2   .text       
+     cmd_sme                                 3CBC41      13      19       2   .text       
+     cmd_gmc                                 3CBC54      37      55       2   .text       
+     cmd_gmf                                 3CBC8B      12      18       2   .text       
+     cmd_gso                                 3CBC9D       A      10       2   .text       
+     cmd_sso                                 3CBCA7      13      19       2   .text       
+     cmd_gsf                                 3CBCBA      16      22       2   .text       
+     cmd_ssf                                 3CBCD0      30      48       2   .text       
+     flash_callback_read                     3CBD00       4       4       3   .text       
+     cmd_rsf                                 3CBD04      2B      43       2   .text       
+     flash_callback_write                    3CBD2F       4       4       3   .text       
+     cmd_wsf                                 3CBD33      2D      45       2   .text       
+     cmd_esf                                 3CBD60       9       9       2   .text       
+     cmd_rse                                 3CBD69      27      39       2   .text       
+     cmd_wse                                 3CBD90      31      49       2   .text       
+     decod_commands                          3CBDC1      AB     171       4   .text       
+     tcp_send_buffer                         3CBE6C      31      49       2   .text       
+     tcp_control_panel_init                  3CBE9D      25      37       2   .text       
+     tcp_control_panel_eventlistener         3CBEC2      59      89       3   .text       
+     udp_send_buffer                         3CBF1B      31      49       2   .text       
+     udp_control_panel_init                  3CBF4C      26      38       2   .text       
+     udp_control_panel_eventlistener         3CBF72      3C      60       3   .text       
+     udp_control_panel_run                   3CBFAE      18      24       2   .text       
+     tim0_ch7_isr                              4685      1B      27       1   NON_BANKED  
+- VARIABLES:
+     lookup_NTC                                4260      31      49       1   .rodata     
+     tab_dec                                   4291       A      10       3   .rodata     
+     table_cmd                                 429B      78     120       2   .rodata     
+     STRING.ERR.DATA...1                       4337       B      11       2   .rodata1    
+     STRING.sld.2                              4342       4       4       1   .rodata1    
+     STRING.gld.3                              4346       4       4       1   .rodata1    
+     STRING.gsw.4                              434A       4       4       1   .rodata1    
+     STRING.gpt.5                              434E       4       4       1   .rodata1    
+     STRING.gpb.6                              4352       4       4       1   .rodata1    
+     STRING.gtp.7                              4356       4       4       1   .rodata1    
+     STRING.gms.8                              435A       4       4       1   .rodata1    
+     STRING.sms.9                              435E       4       4       1   .rodata1    
+     STRING.gmd.10                             4362       4       4       1   .rodata1    
+     STRING.smd.11                             4366       4       4       1   .rodata1    
+     STRING.gme.12                             436A       4       4       1   .rodata1    
+     STRING.sme.13                             436E       4       4       1   .rodata1    
+     STRING.gmc.14                             4372       4       4       1   .rodata1    
+     STRING.gmf.15                             4376       4       4       1   .rodata1    
+     STRING.sso.16                             437A       4       4       1   .rodata1    
+     STRING.gso.17                             437E       4       4       1   .rodata1    
+     STRING.ssf.18                             4382       4       4       1   .rodata1    
+     STRING.gsf.19                             4386       4       4       1   .rodata1    
+     STRING.rsf.20                             438A       4       4       1   .rodata1    
+     STRING.wsf.21                             438E       4       4       1   .rodata1    
+     STRING.esf.22                             4392       4       4       1   .rodata1    
+     STRING.rse.23                             4396       4       4       1   .rodata1    
+     STRING.wse.24                             439A       4       4       1   .rodata1    
+     STRING.ERR.SYNTAX...25                    439E       D      13       1   .rodata1    
+     STRING.ERR.CMD...26                       43AB       A      10       1   .rodata1    
+     ptr_cmdbuf                                3A96       2       2       6   .common     
+     tcp_soch                                  3A98       1       1       4   .common     
+     udp_soch                                  3A99       1       1       4   .common     
+     udp_ipaddr                                3A9A       4       4       4   .common     
+     udp_port                                  3A9E       2       2       2   .common     
+     udp_tcp_buf                               3AA0      14      20      11   .common     
+     udp_data_to_send                          3AB4       1       1       3   .common     
+     MotorSpeed                                3AB5       1       1       3   .common     
+     MotorDirection                            3AB6       1       1       3   .common     
+     MotorRunning                              3AB7       1       1       4   .common     
+     SpeakerFreq                               3AB8       1       1       3   .common     
+     SpeakerOn                                 3AB9       1       1       3   .common     
+     SpeakerCount                              3ABA       1       1       4   .common     
+     flash_data                                3ABB       1       1       4   .common     
+
+*********************************************************************************************
+MODULE STATISTIC
+  Name                                      Data   Code  Const
+---------------------------------------------------------------------------------------------
+  tcp.c.o                                    418   4477      0
+  arp.c.o                                    143   1825      0
+  ip.c.o                                     128   1646      0
+  ne64driver.c.o                            4609    806      0
+  http_server.c.o                             50   1048      0
+  udp.c.o                                     44   1137      0
+  https_callbacks.c.o                          2    533    567
+  system.c.o                                1028      1      0
+  tftps.c.o                                   22    816      0
+  ne64api.c.o                                 40    341      0
+  icmp.c.o                                     0    331      0
+  timers.c.o                                 275    212      0
+  mBuf.c.o                                    26    187      0
+  Start12.c.o                                  0     70      0
+  RTI.c.o                                      1     35      0
+  address.c.o                                  0      0     18
+  os.c.o                                       0      6      0
+  Init.c.o                                     0      1      0
+  STRING.C.o (ansibi.lib)                      0    187      0
+  rtshc12.c.o (ansibi.lib)                     0    447      0
+  Vectors.c.o                                  0      2    128
+  MC9S12NE64.c.o                             228      0      0
+  main.c.o                                    20    388      0
+  Memory.c.o                                   0    670      0
+  ControlPanel.c.o                            38   1936    305
+  other                                        1     30     11
+
+*********************************************************************************************
+SECTION USE IN OBJECT-ALLOCATION SECTION
+---------------------------------------------------------------------------------------------
+SECTION: ".text"
+  tcp_getsocket tcp_listen tcp_send tcp_close tcp_getstate tcp_checksend 
+  tcp_abort tcp_poll tcp_init process_tcp_in process_tcp_out tcp_sendcontrol 
+  tcp_sendreset tcp_initseq tcp_mapsocket tcp_newstate tcp_check_cs process_arp 
+  arp_send_response arp_get_response arp_send_req arp_alloc arp_add arp_find 
+  arp_manage arp_init is_subnet process_ip_in process_ip_out ip_construct_cs 
+  ip_check_cs ip_checksum ip_checksum_buf EtherInit MIIwrite MIIread EtherOpen 
+  EmacEnable EmacControl EtherType EtherStartFrameTransmission UseSWLedRun 
+  https_init https_run https_eventlistener https_deletesession 
+  https_searchsession https_bindsession https_activatesession udp_init 
+  udp_getsocket udp_open udp_send process_udp_in udp_getfreeport https_findfile 
+  https_loadbuffer kick_WD tftps_init tftps_run tftp_callback_write 
+  tftps_eventlistener tftps_sendack tftps_senderror tftps_deletesocket 
+  NE64InitializeOffsetToReadRxBuffer NE64ReadByte NE64ReadWord NE64ReadBytes 
+  NE64InitializeTransmissionBuffer NE64WriteEthernetHeaderToTxBuffer 
+  NE64StartFrameTransmission NE64WriteByte NE64WriteWord NE64WriteBytes 
+  NE64Receive NE64ValidFrameReception NE64FreeReceiveBuffer process_icmp_in 
+  timer_pool_init get_timer init_timer check_timer decrement_timers mBufInit 
+  mENQUEUE mDEQUEUE Init RTI_Init RTI_Enable os_enter_critical_section 
+  os_exit_critical_section init memcpy strlen strcpy strcmp strncmp main 
+  init_serial_memories flash_spi flash_wre flash_wait_WIP flash_bulk_erase 
+  flash_program flash_read flash_read_buffer eeprom_spi eeprom_wre 
+  eeprom_wait_WIP eeprom_unlock eeprom_read_buffer eeprom_write_buffer 
+  AK_HCS12NE_Init AdcRead ReadTemperature SetSpeakerParameters 
+  SetMotorParameters send_ack_data send_nack send_bool_data send_dec_data 
+  get_8bit_data get_bool_data cmd_sld cmd_gld cmd_gsw cmd_gpt cmd_gpb cmd_gtp 
+  cmd_gms cmd_sms cmd_gmd cmd_smd cmd_gme cmd_sme cmd_gmc cmd_gmf cmd_gso 
+  cmd_sso cmd_gsf cmd_ssf flash_callback_read cmd_rsf flash_callback_write 
+  cmd_wsf cmd_esf cmd_rse cmd_wse decod_commands tcp_send_buffer 
+  tcp_control_panel_init tcp_control_panel_eventlistener udp_send_buffer 
+  udp_control_panel_init udp_control_panel_eventlistener udp_control_panel_run 
+SECTION: ".data"
+  aenext.1 lastport.1 FAT_HEADER_ID 
+SECTION: ".bss"
+  handle.1 aenext.2 https_enabled ses.1 tftpsapp_init pCurrentMBuf 
+  pCurrentSendMBuf state.1 LEDcounter 
+SECTION: ".init"
+  _Startup 
+SECTION: ".rodata"
+  https_not_found_page hard_addr prot_addr netw_mask dfgw_addr lookup_NTC 
+  tab_dec table_cmd 
+SECTION: ".rodata1"
+  STRING.WSD..SofTec.Microsys.1 STRING.index.html.2 STRING.ERR.DATA...1 
+  STRING.sld.2 STRING.gld.3 STRING.gsw.4 STRING.gpt.5 STRING.gpb.6 STRING.gtp.7 
+  STRING.gms.8 STRING.sms.9 STRING.gmd.10 STRING.smd.11 STRING.gme.12 
+  STRING.sme.13 STRING.gmc.14 STRING.gmf.15 STRING.sso.16 STRING.gso.17 
+  STRING.ssf.18 STRING.gsf.19 STRING.rsf.20 STRING.wsf.21 STRING.esf.22 
+  STRING.rse.23 STRING.wse.24 STRING.ERR.SYNTAX...25 STRING.ERR.CMD...26 
+SECTION: "NON_BANKED"
+  ephy_isr emac_rx_fc_isr emac_b_rx_error_isr emac_rx_error_isr 
+  emac_rx_b_a_o_isr emac_rx_b_b_o_isr emac_rx_b_a_c_isr emac_rx_b_b_c_isr 
+  emac_mii_mtc_isr emac_lc_isr emac_ec_isr emac_f_tx_c_isr RealTimeInterrupt 
+  _BSHL _LCMP _LCMP_P _LINC _LDEC _LMUL _lDivMod _LDIVU _ILSEXT 
+  _CASE_DIRECT_BYTE _CASE_CHECKED _CASE_CHECKED_BYTE _CASE_SEARCH_8 
+  _CASE_SEARCH_8_BYTE _FPCMP software_trap tim0_ch7_isr 
+SECTION: ".common"
+  received_tcp_packet tcp_socket tcp_tempbuf arp_table arp_timer 
+  received_ip_packet send_ip_packet ip_id gotlink https udp_socket 
+  received_udp_packet base_timer net_buf tftps tftp_addr received_frame 
+  send_frame timer_pool mBufs mBufTx enq_index deq_index localmachine 
+  ptr_cmdbuf tcp_soch udp_soch udp_ipaddr udp_port udp_tcp_buf udp_data_to_send 
+  MotorSpeed MotorDirection MotorRunning SpeakerFreq SpeakerOn SpeakerCount 
+  flash_data 
+SECTION: ".abs_section_2000"
+  emacFIFOa 
+SECTION: ".abs_section_2600"
+  emacFIFOb 
+SECTION: ".abs_section_2c00"
+  emacFIFOtx 
+SECTION: ".abs_section_ff80"
+  _vect 
+SECTION: ".abs_section_3f"
+  _ARMCOP 
+SECTION: ".abs_section_86"
+  _ATDSTAT0 
+SECTION: ".abs_section_8b"
+  _ATDSTAT1 
+SECTION: ".abs_section_8a"
+  _ATDSTAT2 
+SECTION: ".abs_section_89"
+  _ATDTEST1 
+SECTION: ".abs_section_41"
+  _CFORC 
+SECTION: ".abs_section_39"
+  _CLKSEL 
+SECTION: ".abs_section_3c"
+  _COPCTL 
+SECTION: ".abs_section_37"
+  _CRGFLG 
+SECTION: ".abs_section_38"
+  _CRGINT 
+SECTION: ".abs_section_20"
+  _DBGC1 
+SECTION: ".abs_section_28"
+  _DBGC2 
+SECTION: ".abs_section_29"
+  _DBGC3 
+SECTION: ".abs_section_2a"
+  _DBGCAX 
+SECTION: ".abs_section_2d"
+  _DBGCBX 
+SECTION: ".abs_section_25"
+  _DBGCCX 
+SECTION: ".abs_section_24"
+  _DBGCNT 
+SECTION: ".abs_section_21"
+  _DBGSC 
+SECTION: ".abs_section_9"
+  _DDRE 
+SECTION: ".abs_section_252"
+  _DDRG 
+SECTION: ".abs_section_25a"
+  _DDRH 
+SECTION: ".abs_section_262"
+  _DDRJ 
+SECTION: ".abs_section_33"
+  _DDRK 
+SECTION: ".abs_section_26a"
+  _DDRL 
+SECTION: ".abs_section_24a"
+  _DDRS 
+SECTION: ".abs_section_242"
+  _DDRT 
+SECTION: ".abs_section_e"
+  _EBICTL 
+SECTION: ".abs_section_120"
+  _EPHYCTL0 
+SECTION: ".abs_section_121"
+  _EPHYCTL1 
+SECTION: ".abs_section_122"
+  _EPHYSR 
+SECTION: ".abs_section_145"
+  _ETCTL 
+SECTION: ".abs_section_100"
+  _FCLKDIV 
+SECTION: ".abs_section_106"
+  _FCMD 
+SECTION: ".abs_section_103"
+  _FCNFG 
+SECTION: ".abs_section_104"
+  _FPROT 
+SECTION: ".abs_section_101"
+  _FSEC 
+SECTION: ".abs_section_105"
+  _FSTAT 
+SECTION: ".abs_section_1f"
+  _HPRIO 
+SECTION: ".abs_section_e0"
+  _IBAD 
+SECTION: ".abs_section_e2"
+  _IBCR 
+SECTION: ".abs_section_e4"
+  _IBDR 
+SECTION: ".abs_section_e1"
+  _IBFD 
+SECTION: ".abs_section_e3"
+  _IBSR 
+SECTION: ".abs_section_11"
+  _INITRG 
+SECTION: ".abs_section_10"
+  _INITRM 
+SECTION: ".abs_section_1e"
+  _INTCR 
+SECTION: ".abs_section_15"
+  _ITCR 
+SECTION: ".abs_section_16"
+  _ITEST 
+SECTION: ".abs_section_156"
+  _MCMST 
+SECTION: ".abs_section_1c"
+  _MEMSIZ0 
+SECTION: ".abs_section_1d"
+  _MEMSIZ1 
+SECTION: ".abs_section_13"
+  _MISC 
+SECTION: ".abs_section_b"
+  _MODE 
+SECTION: ".abs_section_150"
+  _MPADR 
+SECTION: ".abs_section_151"
+  _MRADR 
+SECTION: ".abs_section_14"
+  _MTST0 
+SECTION: ".abs_section_17"
+  _MTST1 
+SECTION: ".abs_section_140"
+  _NETCTL 
+SECTION: ".abs_section_43"
+  _OC7D 
+SECTION: ".abs_section_42"
+  _OC7M 
+SECTION: ".abs_section_60"
+  _PACTL 
+SECTION: ".abs_section_61"
+  _PAFLG 
+SECTION: ".abs_section_1a"
+  _PARTIDH 
+SECTION: ".abs_section_1b"
+  _PARTIDL 
+SECTION: ".abs_section_a"
+  _PEAR 
+SECTION: ".abs_section_254"
+  _PERG 
+SECTION: ".abs_section_25c"
+  _PERH 
+SECTION: ".abs_section_264"
+  _PERJ 
+SECTION: ".abs_section_26c"
+  _PERL 
+SECTION: ".abs_section_24c"
+  _PERS 
+SECTION: ".abs_section_244"
+  _PERT 
+SECTION: ".abs_section_256"
+  _PIEG 
+SECTION: ".abs_section_25e"
+  _PIEH 
+SECTION: ".abs_section_266"
+  _PIEJ 
+SECTION: ".abs_section_257"
+  _PIFG 
+SECTION: ".abs_section_25f"
+  _PIFH 
+SECTION: ".abs_section_267"
+  _PIFJ 
+SECTION: ".abs_section_3a"
+  _PLLCTL 
+SECTION: ".abs_section_8f"
+  _PORTAD1 
+SECTION: ".abs_section_8"
+  _PORTE 
+SECTION: ".abs_section_32"
+  _PORTK 
+SECTION: ".abs_section_30"
+  _PPAGE 
+SECTION: ".abs_section_255"
+  _PPSG 
+SECTION: ".abs_section_25d"
+  _PPSH 
+SECTION: ".abs_section_265"
+  _PPSJ 
+SECTION: ".abs_section_26d"
+  _PPSL 
+SECTION: ".abs_section_24d"
+  _PPSS 
+SECTION: ".abs_section_245"
+  _PPST 
+SECTION: ".abs_section_250"
+  _PTG 
+SECTION: ".abs_section_258"
+  _PTH 
+SECTION: ".abs_section_251"
+  _PTIG 
+SECTION: ".abs_section_259"
+  _PTIH 
+SECTION: ".abs_section_261"
+  _PTIJ 
+SECTION: ".abs_section_269"
+  _PTIL 
+SECTION: ".abs_section_249"
+  _PTIS 
+SECTION: ".abs_section_241"
+  _PTIT 
+SECTION: ".abs_section_260"
+  _PTJ 
+SECTION: ".abs_section_268"
+  _PTL 
+SECTION: ".abs_section_248"
+  _PTS 
+SECTION: ".abs_section_240"
+  _PTT 
+SECTION: ".abs_section_c"
+  _PUCR 
+SECTION: ".abs_section_253"
+  _RDRG 
+SECTION: ".abs_section_25b"
+  _RDRH 
+SECTION: ".abs_section_d"
+  _RDRIV 
+SECTION: ".abs_section_263"
+  _RDRJ 
+SECTION: ".abs_section_26b"
+  _RDRL 
+SECTION: ".abs_section_24b"
+  _RDRS 
+SECTION: ".abs_section_243"
+  _RDRT 
+SECTION: ".abs_section_35"
+  _REFDV 
+SECTION: ".abs_section_3b"
+  _RTICTL 
+SECTION: ".abs_section_143"
+  _RXCTS 
+SECTION: ".abs_section_ca"
+  _SCI0CR1 
+SECTION: ".abs_section_cb"
+  _SCI0CR2 
+SECTION: ".abs_section_ce"
+  _SCI0DRH 
+SECTION: ".abs_section_cf"
+  _SCI0DRL 
+SECTION: ".abs_section_cc"
+  _SCI0SR1 
+SECTION: ".abs_section_cd"
+  _SCI0SR2 
+SECTION: ".abs_section_d2"
+  _SCI1CR1 
+SECTION: ".abs_section_d3"
+  _SCI1CR2 
+SECTION: ".abs_section_d6"
+  _SCI1DRH 
+SECTION: ".abs_section_d7"
+  _SCI1DRL 
+SECTION: ".abs_section_d4"
+  _SCI1SR1 
+SECTION: ".abs_section_d5"
+  _SCI1SR2 
+SECTION: ".abs_section_da"
+  _SPIBR 
+SECTION: ".abs_section_d8"
+  _SPICR1 
+SECTION: ".abs_section_d9"
+  _SPICR2 
+SECTION: ".abs_section_dd"
+  _SPIDR 
+SECTION: ".abs_section_db"
+  _SPISR 
+SECTION: ".abs_section_14e"
+  _SWRST 
+SECTION: ".abs_section_34"
+  _SYNR 
+SECTION: ".abs_section_48"
+  _TCTL1 
+SECTION: ".abs_section_4a"
+  _TCTL3 
+SECTION: ".abs_section_4e"
+  _TFLG1 
+SECTION: ".abs_section_4f"
+  _TFLG2 
+SECTION: ".abs_section_4c"
+  _TIE 
+SECTION: ".abs_section_40"
+  _TIOS 
+SECTION: ".abs_section_46"
+  _TSCR1 
+SECTION: ".abs_section_4d"
+  _TSCR2 
+SECTION: ".abs_section_47"
+  _TTOV 
+SECTION: ".abs_section_144"
+  _TXCTS 
+SECTION: ".abs_section_26e"
+  _WOML 
+SECTION: ".abs_section_24e"
+  _WOMS 
+SECTION: ".abs_section_82"
+  _ATDCTL23 
+SECTION: ".abs_section_84"
+  _ATDCTL45 
+SECTION: ".abs_section_8c"
+  _ATDDIEN 
+SECTION: ".abs_section_90"
+  _ATDDR0 
+SECTION: ".abs_section_92"
+  _ATDDR1 
+SECTION: ".abs_section_94"
+  _ATDDR2 
+SECTION: ".abs_section_96"
+  _ATDDR3 
+SECTION: ".abs_section_98"
+  _ATDDR4 
+SECTION: ".abs_section_9a"
+  _ATDDR5 
+SECTION: ".abs_section_9c"
+  _ATDDR6 
+SECTION: ".abs_section_9e"
+  _ATDDR7 
+SECTION: ".abs_section_158"
+  _BUFCFG 
+SECTION: ".abs_section_2b"
+  _DBGCA 
+SECTION: ".abs_section_2e"
+  _DBGCB 
+SECTION: ".abs_section_26"
+  _DBGCC 
+SECTION: ".abs_section_22"
+  _DBGTB 
+SECTION: ".abs_section_2"
+  _DDRAB 
+SECTION: ".abs_section_16e"
+  _EMAC_MISC 
+SECTION: ".abs_section_146"
+  _ETYPE 
+SECTION: ".abs_section_14a"
+  _IEVENT 
+SECTION: ".abs_section_14c"
+  _IMASK 
+SECTION: ".abs_section_16c"
+  _MACAD0 
+SECTION: ".abs_section_16a"
+  _MACAD1 
+SECTION: ".abs_section_168"
+  _MACAD2 
+SECTION: ".abs_section_166"
+  _MCHASH0 
+SECTION: ".abs_section_164"
+  _MCHASH1 
+SECTION: ".abs_section_162"
+  _MCHASH2 
+SECTION: ".abs_section_160"
+  _MCHASH3 
+SECTION: ".abs_section_154"
+  _MRDATA 
+SECTION: ".abs_section_152"
+  _MWDATA 
+SECTION: ".abs_section_62"
+  _PACNT 
+SECTION: ".abs_section_0"
+  _PORTAB 
+SECTION: ".abs_section_148"
+  _PTIME 
+SECTION: ".abs_section_15a"
+  _RXAEFP 
+SECTION: ".abs_section_15c"
+  _RXBEFP 
+SECTION: ".abs_section_c8"
+  _SCI0BD 
+SECTION: ".abs_section_d0"
+  _SCI1BD 
+SECTION: ".abs_section_58"
+  _TC4 
+SECTION: ".abs_section_5a"
+  _TC5 
+SECTION: ".abs_section_5c"
+  _TC6 
+SECTION: ".abs_section_5e"
+  _TC7 
+SECTION: ".abs_section_44"
+  _TCNT 
+SECTION: ".abs_section_15e"
+  _TXEFP 
+
+*********************************************************************************************
+OBJECT LIST SORTED BY ADDRESS
+     Name                                      Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+     _PORTAB                                      0       2       2       5   .abs_section_0
+     _DDRAB                                       2       2       2       1   .abs_section_2
+     _PORTE                                       8       1       1       0   .abs_section_8
+     _DDRE                                        9       1       1       0   .abs_section_9
+     _PEAR                                        A       1       1       0   .abs_section_a
+     _MODE                                        B       1       1       0   .abs_section_b
+     _PUCR                                        C       1       1       0   .abs_section_c
+     _RDRIV                                       D       1       1       0   .abs_section_d
+     _EBICTL                                      E       1       1       0   .abs_section_e
+     _INITRM                                     10       1       1       0   .abs_section_10
+     _INITRG                                     11       1       1       0   .abs_section_11
+     _MISC                                       13       1       1       0   .abs_section_13
+     _MTST0                                      14       1       1       0   .abs_section_14
+     _ITCR                                       15       1       1       0   .abs_section_15
+     _ITEST                                      16       1       1       0   .abs_section_16
+     _MTST1                                      17       1       1       0   .abs_section_17
+     _PARTIDH                                    1A       1       1       0   .abs_section_1a
+     _PARTIDL                                    1B       1       1       0   .abs_section_1b
+     _MEMSIZ0                                    1C       1       1       0   .abs_section_1c
+     _MEMSIZ1                                    1D       1       1       0   .abs_section_1d
+     _INTCR                                      1E       1       1       1   .abs_section_1e
+     _HPRIO                                      1F       1       1       0   .abs_section_1f
+     _DBGC1                                      20       1       1       0   .abs_section_20
+     _DBGSC                                      21       1       1       0   .abs_section_21
+     _DBGTB                                      22       2       2       0   .abs_section_22
+     _DBGCNT                                     24       1       1       0   .abs_section_24
+     _DBGCCX                                     25       1       1       0   .abs_section_25
+     _DBGCC                                      26       2       2       0   .abs_section_26
+     _DBGC2                                      28       1       1       0   .abs_section_28
+     _DBGC3                                      29       1       1       0   .abs_section_29
+     _DBGCAX                                     2A       1       1       0   .abs_section_2a
+     _DBGCA                                      2B       2       2       0   .abs_section_2b
+     _DBGCBX                                     2D       1       1       0   .abs_section_2d
+     _DBGCB                                      2E       2       2       0   .abs_section_2e
+     _PPAGE                                      30       1       1       0   .abs_section_30
+     _PORTK                                      32       1       1       4   .abs_section_32
+     _DDRK                                       33       1       1       1   .abs_section_33
+     _SYNR                                       34       1       1       1   .abs_section_34
+     _REFDV                                      35       1       1       1   .abs_section_35
+     _CRGFLG                                     37       1       1       3   .abs_section_37
+     _CRGINT                                     38       1       1       2   .abs_section_38
+     _CLKSEL                                     39       1       1       3   .abs_section_39
+     _PLLCTL                                     3A       1       1       3   .abs_section_3a
+     _RTICTL                                     3B       1       1       2   .abs_section_3b
+     _COPCTL                                     3C       1       1       0   .abs_section_3c
+     _ARMCOP                                     3F       1       1       0   .abs_section_3f
+     _TIOS                                       40       1       1       1   .abs_section_40
+     _CFORC                                      41       1       1       0   .abs_section_41
+     _OC7M                                       42       1       1       1   .abs_section_42
+     _OC7D                                       43       1       1       0   .abs_section_43
+     _TCNT                                       44       2       2       1   .abs_section_44
+     _TSCR1                                      46       1       1       1   .abs_section_46
+     _TTOV                                       47       1       1       1   .abs_section_47
+     _TCTL1                                      48       1       1       1   .abs_section_48
+     _TCTL3                                      4A       1       1       0   .abs_section_4a
+     _TIE                                        4C       1       1       2   .abs_section_4c
+     _TSCR2                                      4D       1       1       1   .abs_section_4d
+     _TFLG1                                      4E       1       1       1   .abs_section_4e
+     _TFLG2                                      4F       1       1       0   .abs_section_4f
+     _TC4                                        58       2       2      11   .abs_section_58
+     _TC5                                        5A       2       2      11   .abs_section_5a
+     _TC6                                        5C       2       2       0   .abs_section_5c
+     _TC7                                        5E       2       2       1   .abs_section_5e
+     _PACTL                                      60       1       1       0   .abs_section_60
+     _PAFLG                                      61       1       1       0   .abs_section_61
+     _PACNT                                      62       2       2       0   .abs_section_62
+     _ATDCTL23                                   82       2       2       2   .abs_section_82
+     _ATDCTL45                                   84       2       2       2   .abs_section_84
+     _ATDSTAT0                                   86       1       1       0   .abs_section_86
+     _ATDTEST1                                   89       1       1       0   .abs_section_89
+     _ATDSTAT2                                   8A       1       1       0   .abs_section_8a
+     _ATDSTAT1                                   8B       1       1       1   .abs_section_8b
+     _ATDDIEN                                    8C       2       2       0   .abs_section_8c
+     _PORTAD1                                    8F       1       1       0   .abs_section_8f
+     _ATDDR0                                     90       2       2       1   .abs_section_90
+     _ATDDR1                                     92       2       2       0   .abs_section_92
+     _ATDDR2                                     94       2       2       0   .abs_section_94
+     _ATDDR3                                     96       2       2       0   .abs_section_96
+     _ATDDR4                                     98       2       2       0   .abs_section_98
+     _ATDDR5                                     9A       2       2       0   .abs_section_9a
+     _ATDDR6                                     9C       2       2       0   .abs_section_9c
+     _ATDDR7                                     9E       2       2       0   .abs_section_9e
+     _SCI0BD                                     C8       2       2       0   .abs_section_c8
+     _SCI0CR1                                    CA       1       1       0   .abs_section_ca
+     _SCI0CR2                                    CB       1       1       0   .abs_section_cb
+     _SCI0SR1                                    CC       1       1       0   .abs_section_cc
+     _SCI0SR2                                    CD       1       1       0   .abs_section_cd
+     _SCI0DRH                                    CE       1       1       0   .abs_section_ce
+     _SCI0DRL                                    CF       1       1       0   .abs_section_cf
+     _SCI1BD                                     D0       2       2       0   .abs_section_d0
+     _SCI1CR1                                    D2       1       1       0   .abs_section_d2
+     _SCI1CR2                                    D3       1       1       0   .abs_section_d3
+     _SCI1SR1                                    D4       1       1       0   .abs_section_d4
+     _SCI1SR2                                    D5       1       1       0   .abs_section_d5
+     _SCI1DRH                                    D6       1       1       0   .abs_section_d6
+     _SCI1DRL                                    D7       1       1       0   .abs_section_d7
+     _SPICR1                                     D8       1       1       1   .abs_section_d8
+     _SPICR2                                     D9       1       1       1   .abs_section_d9
+     _SPIBR                                      DA       1       1       7   .abs_section_da
+     _SPISR                                      DB       1       1       4   .abs_section_db
+     _SPIDR                                      DD       1       1       4   .abs_section_dd
+     _IBAD                                       E0       1       1       0   .abs_section_e0
+     _IBFD                                       E1       1       1       0   .abs_section_e1
+     _IBCR                                       E2       1       1       0   .abs_section_e2
+     _IBSR                                       E3       1       1       0   .abs_section_e3
+     _IBDR                                       E4       1       1       0   .abs_section_e4
+     _FCLKDIV                                   100       1       1       0   .abs_section_100
+     _FSEC                                      101       1       1       0   .abs_section_101
+     _FCNFG                                     103       1       1       0   .abs_section_103
+     _FPROT                                     104       1       1       0   .abs_section_104
+     _FSTAT                                     105       1       1       0   .abs_section_105
+     _FCMD                                      106       1       1       0   .abs_section_106
+     _EPHYCTL0                                  120       1       1       5   .abs_section_120
+     _EPHYCTL1                                  121       1       1       1   .abs_section_121
+     _EPHYSR                                    122       1       1       1   .abs_section_122
+     _NETCTL                                    140       1       1       2   .abs_section_140
+     _RXCTS                                     143       1       1       1   .abs_section_143
+     _TXCTS                                     144       1       1       3   .abs_section_144
+     _ETCTL                                     145       1       1       1   .abs_section_145
+     _ETYPE                                     146       2       2       1   .abs_section_146
+     _PTIME                                     148       2       2       0   .abs_section_148
+     _IEVENT                                    14A       2       2      16   .abs_section_14a
+     _IMASK                                     14C       2       2      11   .abs_section_14c
+     _SWRST                                     14E       1       1       1   .abs_section_14e
+     _MPADR                                     150       1       1       2   .abs_section_150
+     _MRADR                                     151       1       1       2   .abs_section_151
+     _MWDATA                                    152       2       2       1   .abs_section_152
+     _MRDATA                                    154       2       2       1   .abs_section_154
+     _MCMST                                     156       1       1       9   .abs_section_156
+     _BUFCFG                                    158       2       2       5   .abs_section_158
+     _RXAEFP                                    15A       2       2       1   .abs_section_15a
+     _RXBEFP                                    15C       2       2       1   .abs_section_15c
+     _TXEFP                                     15E       2       2       1   .abs_section_15e
+     _MCHASH3                                   160       2       2       0   .abs_section_160
+     _MCHASH2                                   162       2       2       0   .abs_section_162
+     _MCHASH1                                   164       2       2       0   .abs_section_164
+     _MCHASH0                                   166       2       2       0   .abs_section_166
+     _MACAD2                                    168       2       2       1   .abs_section_168
+     _MACAD1                                    16A       2       2       0   .abs_section_16a
+     _MACAD0                                    16C       2       2       0   .abs_section_16c
+     _EMAC_MISC                                 16E       2       2       0   .abs_section_16e
+     _PTT                                       240       1       1       5   .abs_section_240
+     _PTIT                                      241       1       1       0   .abs_section_241
+     _DDRT                                      242       1       1       1   .abs_section_242
+     _RDRT                                      243       1       1       0   .abs_section_243
+     _PERT                                      244       1       1       0   .abs_section_244
+     _PPST                                      245       1       1       0   .abs_section_245
+     _PTS                                       248       1       1      13   .abs_section_248
+     _PTIS                                      249       1       1       0   .abs_section_249
+     _DDRS                                      24A       1       1       1   .abs_section_24a
+     _RDRS                                      24B       1       1       0   .abs_section_24b
+     _PERS                                      24C       1       1       0   .abs_section_24c
+     _PPSS                                      24D       1       1       0   .abs_section_24d
+     _WOMS                                      24E       1       1       0   .abs_section_24e
+     _PTG                                       250       1       1       3   .abs_section_250
+     _PTIG                                      251       1       1       0   .abs_section_251
+     _DDRG                                      252       1       1       0   .abs_section_252
+     _RDRG                                      253       1       1       0   .abs_section_253
+     _PERG                                      254       1       1       1   .abs_section_254
+     _PPSG                                      255       1       1       1   .abs_section_255
+     _PIEG                                      256       1       1       0   .abs_section_256
+     _PIFG                                      257       1       1       0   .abs_section_257
+     _PTH                                       258       1       1       1   .abs_section_258
+     _PTIH                                      259       1       1       0   .abs_section_259
+     _DDRH                                      25A       1       1       0   .abs_section_25a
+     _RDRH                                      25B       1       1       0   .abs_section_25b
+     _PERH                                      25C       1       1       1   .abs_section_25c
+     _PPSH                                      25D       1       1       1   .abs_section_25d
+     _PIEH                                      25E       1       1       0   .abs_section_25e
+     _PIFH                                      25F       1       1       0   .abs_section_25f
+     _PTJ                                       260       1       1       0   .abs_section_260
+     _PTIJ                                      261       1       1       0   .abs_section_261
+     _DDRJ                                      262       1       1       0   .abs_section_262
+     _RDRJ                                      263       1       1       0   .abs_section_263
+     _PERJ                                      264       1       1       0   .abs_section_264
+     _PPSJ                                      265       1       1       0   .abs_section_265
+     _PIEJ                                      266       1       1       0   .abs_section_266
+     _PIFJ                                      267       1       1       0   .abs_section_267
+     _PTL                                       268       1       1      33   .abs_section_268
+     _PTIL                                      269       1       1       0   .abs_section_269
+     _DDRL                                      26A       1       1       6   .abs_section_26a
+     _RDRL                                      26B       1       1       0   .abs_section_26b
+     _PERL                                      26C       1       1       0   .abs_section_26c
+     _PPSL                                      26D       1       1       0   .abs_section_26d
+     _WOML                                      26E       1       1       0   .abs_section_26e
+     emacFIFOa                                 2000     600    1536       1   .abs_section_2000
+     emacFIFOb                                 2600     600    1536       1   .abs_section_2600
+     emacFIFOtx                                2C00     600    1536       1   .abs_section_2c00
+     aenext.1                                  3200       1       1       5   .data       
+     lastport.1                                3201       2       2       7   .data       
+     FAT_HEADER_ID                             3203       2       2       2   .data       
+     handle.1                                  3205       1       1       9   .bss        
+     aenext.2                                  3206       1       1       5   .bss        
+     https_enabled                             3207       1       1       3   .bss        
+     ses.1                                     3208       1       1      15   .bss        
+     tftpsapp_init                             3209       1       1       4   .bss        
+     pCurrentMBuf                              320A       2       2       8   .bss        
+     pCurrentSendMBuf                          320C       2       2       9   .bss        
+     state.1                                   320E       1       1       2   .bss        
+     LEDcounter                                320F       2       2       3   .bss        
+     received_tcp_packet                       3211      3F      63      83   .common     
+     tcp_socket                                3250     14D     333      13   .common     
+     tcp_tempbuf                               339D      15      21       3   .common     
+     arp_table                                 33B2      8C     140      11   .common     
+     arp_timer                                 343E       1       1       3   .common     
+     received_ip_packet                        343F      3F      63      45   .common     
+     send_ip_packet                            347E      3F      63      31   .common     
+     ip_id                                     34BD       2       2       2   .common     
+     gotlink                                   34BF       1       1       4   .common     
+     https                                     34C0      30      48      71   .common     
+     udp_socket                                34F0      20      32       6   .common     
+     received_udp_packet                       3510       A      10      11   .common     
+     base_timer                                351A       4       4       1   .common     
+     net_buf                                   351E     400    1024      30   .common     
+     tftps                                     391E      11      17      55   .common     
+     tftp_addr                                 392F       4       4       8   .common     
+     received_frame                            3933      12      18       7   .common     
+     send_frame                                3945      12      18      13   .common     
+     timer_pool                                3957     113     275      17   .common     
+     mBufs                                     3A6A      10      16      18   .common     
+     mBufTx                                    3A7A       8       8       5   .common     
+     enq_index                                 3A82       1       1       4   .common     
+     deq_index                                 3A83       1       1       5   .common     
+     localmachine                              3A84      12      18      57   .common     
+     ptr_cmdbuf                                3A96       2       2       6   .common     
+     tcp_soch                                  3A98       1       1       4   .common     
+     udp_soch                                  3A99       1       1       4   .common     
+     udp_ipaddr                                3A9A       4       4       4   .common     
+     udp_port                                  3A9E       2       2       2   .common     
+     udp_tcp_buf                               3AA0      14      20      11   .common     
+     udp_data_to_send                          3AB4       1       1       3   .common     
+     MotorSpeed                                3AB5       1       1       3   .common     
+     MotorDirection                            3AB6       1       1       3   .common     
+     MotorRunning                              3AB7       1       1       4   .common     
+     SpeakerFreq                               3AB8       1       1       3   .common     
+     SpeakerOn                                 3AB9       1       1       3   .common     
+     SpeakerCount                              3ABA       1       1       4   .common     
+     flash_data                                3ABB       1       1       4   .common     
+     _Startup                                  4000      1D      29       1   .init       
+     https_not_found_page                      403B     213     531       2   .rodata     
+     hard_addr                                 424E       6       6       1   .rodata     
+     prot_addr                                 4254       4       4       1   .rodata     
+     netw_mask                                 4258       4       4       1   .rodata     
+     dfgw_addr                                 425C       4       4       1   .rodata     
+     lookup_NTC                                4260      31      49       1   .rodata     
+     tab_dec                                   4291       A      10       3   .rodata     
+     table_cmd                                 429B      78     120       2   .rodata     
+     STRING.WSD..SofTec.Microsys.1             4313      19      25       1   .rodata1    
+     STRING.index.html.2                       432C       B      11       1   .rodata1    
+     STRING.ERR.DATA...1                       4337       B      11       2   .rodata1    
+     STRING.sld.2                              4342       4       4       1   .rodata1    
+     STRING.gld.3                              4346       4       4       1   .rodata1    
+     STRING.gsw.4                              434A       4       4       1   .rodata1    
+     STRING.gpt.5                              434E       4       4       1   .rodata1    
+     STRING.gpb.6                              4352       4       4       1   .rodata1    
+     STRING.gtp.7                              4356       4       4       1   .rodata1    
+     STRING.gms.8                              435A       4       4       1   .rodata1    
+     STRING.sms.9                              435E       4       4       1   .rodata1    
+     STRING.gmd.10                             4362       4       4       1   .rodata1    
+     STRING.smd.11                             4366       4       4       1   .rodata1    
+     STRING.gme.12                             436A       4       4       1   .rodata1    
+     STRING.sme.13                             436E       4       4       1   .rodata1    
+     STRING.gmc.14                             4372       4       4       1   .rodata1    
+     STRING.gmf.15                             4376       4       4       1   .rodata1    
+     STRING.sso.16                             437A       4       4       1   .rodata1    
+     STRING.gso.17                             437E       4       4       1   .rodata1    
+     STRING.ssf.18                             4382       4       4       1   .rodata1    
+     STRING.gsf.19                             4386       4       4       1   .rodata1    
+     STRING.rsf.20                             438A       4       4       1   .rodata1    
+     STRING.wsf.21                             438E       4       4       1   .rodata1    
+     STRING.esf.22                             4392       4       4       1   .rodata1    
+     STRING.rse.23                             4396       4       4       1   .rodata1    
+     STRING.wse.24                             439A       4       4       1   .rodata1    
+     STRING.ERR.SYNTAX...25                    439E       D      13       1   .rodata1    
+     STRING.ERR.CMD...26                       43AB       A      10       1   .rodata1    
+     ephy_isr                                  43B5      89     137       1   NON_BANKED  
+     emac_rx_fc_isr                            443E       7       7       1   NON_BANKED  
+     emac_b_rx_error_isr                       4445       7       7       1   NON_BANKED  
+     emac_rx_error_isr                         444C       7       7       1   NON_BANKED  
+     emac_rx_b_a_o_isr                         4453       7       7       1   NON_BANKED  
+     emac_rx_b_b_o_isr                         445A       7       7       1   NON_BANKED  
+     emac_rx_b_a_c_isr                         4461      19      25       1   NON_BANKED  
+     emac_rx_b_b_c_isr                         447A      19      25       1   NON_BANKED  
+     emac_mii_mtc_isr                          4493       1       1       1   NON_BANKED  
+     emac_lc_isr                               4494       B      11       1   NON_BANKED  
+     emac_ec_isr                               449F       B      11       1   NON_BANKED  
+     emac_f_tx_c_isr                           44AA       B      11       1   NON_BANKED  
+     RealTimeInterrupt                         44B5       F      15       1   NON_BANKED  
+     _BSHL                                     44C4       8       8       5   NON_BANKED  
+     _LCMP                                     44CC      19      25       3   NON_BANKED  
+     _LCMP_P                                   44E5      15      21       4   NON_BANKED  
+     _LINC                                     44FA       5       5      12   NON_BANKED  
+     _LDEC                                     44FF       8       8       1   NON_BANKED  
+     _LMUL                                     4507      27      39       1   NON_BANKED  
+     _lDivMod                                  452E      E3     227       1   NON_BANKED  
+     _LDIVU                                    4611       E      14       3   NON_BANKED  
+     _ILSEXT                                   461F       7       7       2   NON_BANKED  
+     _CASE_DIRECT_BYTE                         4626       5       5       2   NON_BANKED  
+     _CASE_CHECKED                             462B       B      11       3   NON_BANKED  
+     _CASE_CHECKED_BYTE                        4636      14      20       1   NON_BANKED  
+     _CASE_SEARCH_8                            464A      17      23       1   NON_BANKED  
+     _CASE_SEARCH_8_BYTE                       4661      1A      26       1   NON_BANKED  
+     _FPCMP                                    467B       8       8       3   NON_BANKED  
+     software_trap                             4683       2       2      49   NON_BANKED  
+     tim0_ch7_isr                              4685      1B      27       1   NON_BANKED  
+     _vect                                     FF80      80     128       0   .abs_section_ff80
+     tcp_getsocket                           3C8000      71     113       4   .text       
+     tcp_listen                              3C8071      77     119       6   .text       
+     tcp_send                                3C80E8      85     133       6   .text       
+     tcp_close                               3C816D      94     148       4   .text       
+     tcp_getstate                            3C8201      18      24       2   .text       
+     tcp_checksend                           3C8219      30      48       2   .text       
+     tcp_abort                               3C8249      5F      95       2   .text       
+     tcp_poll                                3C82A8     2A0     672      33   .text       
+     tcp_init                                3C8548      78     120       2   .text       
+     process_tcp_in                          3C85C0     77E    1918     143   .text       
+     process_tcp_out                         3C8D3E     19E     414      16   .text       
+     tcp_sendcontrol                         3C8EDC      1F      31      10   .text       
+     tcp_sendreset                           3C8EFB      71     113       4   .text       
+     tcp_initseq                             3C8F6C       E      14       2   .text       
+     tcp_mapsocket                           3C8F7A      8A     138       2   .text       
+     tcp_newstate                            3C9004      64     100      44   .text       
+     tcp_check_cs                            3C9068     115     277       2   .text       
+     process_arp                             3C917D      52      82       2   .text       
+     arp_send_response                       3C91CF     158     344      13   .text       
+     arp_get_response                        3C9327      E8     232       4   .text       
+     arp_send_req                            3C940F      C5     197       4   .text       
+     arp_alloc                               3C94D4      8F     143       6   .text       
+     arp_add                                 3C9563      D4     212       5   .text       
+     arp_find                                3C9637     106     262       5   .text       
+     arp_manage                              3C973D      BE     190       2   .text       
+     arp_init                                3C97FB      64     100       2   .text       
+     is_subnet                               3C985F      3F      63       4   .text       
+     process_ip_in                           3C989E     1C5     453      19   .text       
+     process_ip_out                          3C9A63     138     312       7   .text       
+     ip_construct_cs                         3C9B9B     145     325       2   .text       
+     ip_check_cs                             3C9CE0     162     354       2   .text       
+     ip_checksum                             3C9E42      47      71     184   .text       
+     ip_checksum_buf                         3C9E89      83     131      10   .text       
+     EtherInit                               3C9F0C      CD     205       2   .text       
+     MIIwrite                                3C9FD9      45      69       4   .text       
+     MIIread                                 3CA01E      33      51       8   .text       
+     EtherOpen                               3CA051      82     130       2   .text       
+     EmacEnable                              3CA0D3       5       5       2   .text       
+     EmacControl                             3CA0D8       4       4       2   .text       
+     EtherType                               3CA0DC       B      11       2   .text       
+     EtherStartFrameTransmission             3CA0E7      31      49       2   .text       
+     UseSWLedRun                             3CA118      1A      26       2   .text       
+     https_init                              3CA132      7D     125       2   .text       
+     https_run                               3CA1AF     127     295       6   .text       
+     https_eventlistener                     3CA2D6     1D7     471      24   .text       
+     https_deletesession                     3CA4AD      2E      46       6   .text       
+     https_searchsession                     3CA4DB      29      41       2   .text       
+     https_bindsession                       3CA504      36      54       2   .text       
+     https_activatesession                   3CA53A      10      16       2   .text       
+     udp_init                                3CA54A      2B      43       2   .text       
+     udp_getsocket                           3CA575      58      88       4   .text       
+     udp_open                                3CA5CD      2B      43       4   .text       
+     udp_send                                3CA5F8     1CC     460      17   .text       
+     process_udp_in                          3CA7C4     19C     412       3   .text       
+     udp_getfreeport                         3CA960      5B      91       2   .text       
+     https_findfile                          3CA9BB     14C     332       2   .text       
+     https_loadbuffer                        3CAB07      C9     201       5   .text       
+     kick_WD                                 3CABD0       1       1      32   .text       
+     tftps_init                              3CABD1      55      85       2   .text       
+     tftps_run                               3CAC26      25      37       2   .text       
+     tftp_callback_write                     3CAC4B      14      20       3   .text       
+     tftps_eventlistener                     3CAC5F     214     532      31   .text       
+     tftps_sendack                           3CAE73      36      54       4   .text       
+     tftps_senderror                         3CAEA9      41      65       2   .text       
+     tftps_deletesocket                      3CAEEA      17      23       8   .text       
+     NE64InitializeOffsetToReadRxBuffer      3CAF01       C      12      22   .text       
+     NE64ReadByte                            3CAF0D      11      17      60   .text       
+     NE64ReadWord                            3CAF1E       A      10      18   .text       
+     NE64ReadBytes                           3CAF28      1D      29       6   .text       
+     NE64InitializeTransmissionBuffer        3CAF45      1B      27       6   .text       
+     NE64WriteEthernetHeaderToTxBuffer       3CAF60      46      70       6   .text       
+     NE64StartFrameTransmission              3CAFA6       5       5       6   .text       
+     NE64WriteByte                           3CAFAB      17      23      12   .text       
+     NE64WriteWord                           3CAFC2      13      19       8   .text       
+     NE64WriteBytes                          3CAFD5      1F      31       2   .text       
+     NE64Receive                             3CAFF4      2E      46       4   .text       
+     NE64ValidFrameReception                 3CB022       F      15       2   .text       
+     NE64FreeReceiveBuffer                   3CB031      25      37       2   .text       
+     process_icmp_in                         3CB056     14B     331       3   .text       
+     timer_pool_init                         3CB1A1      24      36       2   .text       
+     get_timer                               3CB1C5      26      38       6   .text       
+     init_timer                              3CB1EB      38      56      22   .text       
+     check_timer                             3CB223      13      19       6   .text       
+     decrement_timers                        3CB236      3F      63       2   .text       
+     mBufInit                                3CB275      2D      45       2   .text       
+     mENQUEUE                                3CB2A2      3A      58       2   .text       
+     mDEQUEUE                                3CB2DC      54      84       2   .text       
+     Init                                    3CB330      29      41       2   .text       
+     RTI_Init                                3CB359       C      12       2   .text       
+     RTI_Enable                              3CB365       8       8       2   .text       
+     os_enter_critical_section               3CB36D       3       3       2   .text       
+     os_exit_critical_section                3CB370       3       3       2   .text       
+     init                                    3CB373       1       1       2   .text       
+     memcpy                                  3CB374      26      38       6   .text       
+     strlen                                  3CB39A      14      20       4   .text       
+     strcpy                                  3CB3AE      11      17       4   .text       
+     strcmp                                  3CB3BF      33      51       2   .text       
+     strncmp                                 3CB3F2      3D      61       4   .text       
+     main                                    3CB42F     184     388       2   .text       
+     init_serial_memories                    3CB5B3      1F      31       2   .text       
+     flash_spi                               3CB5D2      11      17      22   .text       
+     flash_wre                               3CB5E3       F      15       4   .text       
+     flash_wait_WIP                          3CB5F2      1E      30       4   .text       
+     flash_bulk_erase                        3CB610      17      23       4   .text       
+     flash_program                           3CB627      7B     123       4   .text       
+     flash_read                              3CB6A2      4C      76       2   .text       
+     flash_read_buffer                       3CB6EE      3D      61       6   .text       
+     eeprom_spi                              3CB72B      11      17      22   .text       
+     eeprom_wre                              3CB73C       F      15       4   .text       
+     eeprom_wait_WIP                         3CB74B      1E      30       4   .text       
+     eeprom_unlock                           3CB769      24      36       2   .text       
+     eeprom_read_buffer                      3CB78D      48      72      10   .text       
+     eeprom_write_buffer                     3CB7D5      7C     124      10   .text       
+     AK_HCS12NE_Init                         3CB851      5C      92       2   .text       
+     AdcRead                                 3CB8AD      29      41       6   .text       
+     ReadTemperature                         3CB8D6      22      34       2   .text       
+     SetSpeakerParameters                    3CB8F8      11      17       4   .text       
+     SetMotorParameters                      3CB909      ED     237       6   .text       
+     send_ack_data                           3CB9F6       B      11      18   .text       
+     send_nack                               3CBA01       E      14       8   .text       
+     send_bool_data                          3CBA0F      16      22      14   .text       
+     send_dec_data                           3CBA25      9C     156      15   .text       
+     get_8bit_data                           3CBAC1      66     102      26   .text       
+     get_bool_data                           3CBB27      1D      29       8   .text       
+     cmd_sld                                 3CBB44      36      54       2   .text       
+     cmd_gld                                 3CBB7A      19      25       2   .text       
+     cmd_gsw                                 3CBB93      29      41       2   .text       
+     cmd_gpt                                 3CBBBC       F      15       2   .text       
+     cmd_gpb                                 3CBBCB      21      33       2   .text       
+     cmd_gtp                                 3CBBEC       E      14       2   .text       
+     cmd_gms                                 3CBBFA       D      13       2   .text       
+     cmd_sms                                 3CBC07      13      19       2   .text       
+     cmd_gmd                                 3CBC1A       A      10       2   .text       
+     cmd_smd                                 3CBC24      13      19       2   .text       
+     cmd_gme                                 3CBC37       A      10       2   .text       
+     cmd_sme                                 3CBC41      13      19       2   .text       
+     cmd_gmc                                 3CBC54      37      55       2   .text       
+     cmd_gmf                                 3CBC8B      12      18       2   .text       
+     cmd_gso                                 3CBC9D       A      10       2   .text       
+     cmd_sso                                 3CBCA7      13      19       2   .text       
+     cmd_gsf                                 3CBCBA      16      22       2   .text       
+     cmd_ssf                                 3CBCD0      30      48       2   .text       
+     flash_callback_read                     3CBD00       4       4       3   .text       
+     cmd_rsf                                 3CBD04      2B      43       2   .text       
+     flash_callback_write                    3CBD2F       4       4       3   .text       
+     cmd_wsf                                 3CBD33      2D      45       2   .text       
+     cmd_esf                                 3CBD60       9       9       2   .text       
+     cmd_rse                                 3CBD69      27      39       2   .text       
+     cmd_wse                                 3CBD90      31      49       2   .text       
+     decod_commands                          3CBDC1      AB     171       4   .text       
+     tcp_send_buffer                         3CBE6C      31      49       2   .text       
+     tcp_control_panel_init                  3CBE9D      25      37       2   .text       
+     tcp_control_panel_eventlistener         3CBEC2      59      89       3   .text       
+     udp_send_buffer                         3CBF1B      31      49       2   .text       
+     udp_control_panel_init                  3CBF4C      26      38       2   .text       
+     udp_control_panel_eventlistener         3CBF72      3C      60       3   .text       
+     udp_control_panel_run                   3CBFAE      18      24       2   .text       
+
+*********************************************************************************************
+UNUSED-OBJECTS SECTION
+---------------------------------------------------------------------------------------------
+NOT USED PROCEDURES
+tcp.c.o:
+  tcp_releasesocket tcp_connect tcp_getfreeport 
+ne64driver.c.o:
+  EtherSend EtherClose EmacDisable EtherIoctl EtherGetPhysAddr EtherAbortTx 
+  EtherPause EtherOtherTx 
+http_server.c.o:
+  https_read_encoded https_calculatehash 
+udp.c.o:
+  udp_releasesocket udp_close 
+system.c.o:
+  __strlen bufsearch __tolower __toupper isnumeric hextoascii asciitohex 
+  __ltoa __itoa __atoi mputs mputhex wait random dummy enter_power_save 
+  exit_power_save 
+ne64api.c.o:
+  NE64GetCurrentReceivedFrame 
+timers.c.o:
+  free_timer 
+RTI.c.o:
+  RTI_Disable 
+STRING.C.o (ansibi.lib):
+  strerror memchr memcmp memcpy2 _memcpy_8bitCount memmove memset 
+  _memset_clear_8bitCount strset strcat strncat strncpy strchr strrchr strspn 
+  strcspn strpbrk strstr strtok strcoll strxfrm 
+rtshc12.c.o (ansibi.lib):
+  _BSHRS _BSHRU _BDIVMODU _BDIVMODS _ISHL _ISHRU _ISHRS _LSHL _LSHRU _LSHRS 
+  _LADD _LSUB _LAND _LOR _LXOR _LCMP_PP _LNEG _LABS _LCOM _NEG_P _LDIVS _LMODU 
+  _LMODS _LTEST _COPY _CASE_DIRECT _CASE_SEARCH _CASE_SEARCH_BYTE _FCALL 
+main.c.o:
+  dns_pop3_listener 
+NOT USED VARIABLES
+tcp.c.o:
+  lastport.2 
+ne64driver.c.o:
+  gotxflowc 
+system.c.o:
+  sleep_mode 
+address.c.o:
+  brcs_addr 
+STRING.C.o (ansibi.lib):
+  STRING..1 next.2 
+rtshc12.c.o (ansibi.lib):
+  _PowOfTwo_8 _PowOfTwo_16 _PowOfTwo_32 
+main.c.o:
+  IP_POP3_Server POP3_Connected 
+
+*********************************************************************************************
+COPYDOWN SECTION
+---------------------------------------------------------------------------------------------
+------- ROM-ADDRESS: 0x46A0 ---- SIZE       4 ---
+Filling bytes inserted
+ 00053200
+------- ROM-ADDRESS: 0x46A4 ---- RAM-ADDRESS: 0x3200 ---- SIZE       1 ---
+Name of initialized Object : aenext.1
+ 01
+------- ROM-ADDRESS: 0x46A5 ---- SIZE       1 ---
+Filling bytes inserted
+ 00
+------- ROM-ADDRESS: 0x46A6 ---- RAM-ADDRESS: 0x3202 ---- SIZE       1 ---
+Name of initialized Object : lastport.1:1
+ 01
+------- ROM-ADDRESS: 0x46A7 ---- RAM-ADDRESS: 0x3203 ---- SIZE       2 ---
+Name of initialized Object : FAT_HEADER_ID
+ 4313
+------- ROM-ADDRESS: 0x46A9 ---- SIZE       2 ---
+Filling bytes inserted
+ 0000
+
+*********************************************************************************************
+OBJECT-DEPENDENCIES SECTION
+---------------------------------------------------------------------------------------------
+FAT_HEADER_ID             USES STRING.WSD..SofTec.Microsys.1 
+_Startup                  USES _startupData Init 
+table_cmd                 USES STRING.sld.2 cmd_sld STRING.gld.3 cmd_gld 
+                                STRING.gsw.4 cmd_gsw STRING.gpt.5 cmd_gpt STRING.gpb.6 
+                                cmd_gpb STRING.gtp.7 cmd_gtp STRING.gms.8 cmd_gms 
+                                STRING.sms.9 cmd_sms STRING.gmd.10 cmd_gmd STRING.smd.11 
+                                cmd_smd STRING.gme.12 cmd_gme STRING.sme.13 cmd_sme 
+                                STRING.gmc.14 cmd_gmc STRING.gmf.15 cmd_gmf STRING.sso.16 
+                                cmd_sso STRING.gso.17 cmd_gso STRING.ssf.18 cmd_ssf 
+                                STRING.gsf.19 cmd_gsf STRING.rsf.20 cmd_rsf STRING.wsf.21 
+                                cmd_wsf STRING.esf.22 cmd_esf STRING.rse.23 cmd_rse 
+                                STRING.wse.24 cmd_wse 
+ephy_isr                  USES MIIread gotlink _PTL _EPHYSR 
+emac_rx_fc_isr            USES _IEVENT 
+emac_b_rx_error_isr       USES _IEVENT 
+emac_rx_error_isr         USES _IEVENT 
+emac_rx_b_a_o_isr         USES _IEVENT 
+emac_rx_b_b_o_isr         USES _IEVENT 
+emac_rx_b_a_c_isr         USES emacFIFOa _RXAEFP _IEVENT NE64Receive _PTL 
+emac_rx_b_b_c_isr         USES emacFIFOb _RXBEFP _IEVENT NE64Receive _PTL 
+emac_lc_isr               USES _IEVENT _PTL 
+emac_ec_isr               USES _IEVENT _PTL 
+emac_f_tx_c_isr           USES _IEVENT _PTL 
+RealTimeInterrupt         USES _CRGFLG decrement_timers state.1 
+_LDIVU                    USES _lDivMod 
+tim0_ch7_isr              USES _TFLG1 SpeakerCount SpeakerFreq _PTT 
+_vect                     USES software_trap emac_ec_isr emac_lc_isr 
+                                emac_b_rx_error_isr emac_rx_b_b_o_isr emac_rx_b_a_o_isr 
+                                emac_rx_error_isr emac_mii_mtc_isr emac_rx_fc_isr 
+                                emac_f_tx_c_isr emac_rx_b_b_c_isr emac_rx_b_a_c_isr ephy_isr 
+                                tim0_ch7_isr RealTimeInterrupt _Startup 
+tcp_getsocket             USES _FPCMP tcp_socket 
+tcp_listen                USES tcp_socket _FPCMP 
+tcp_send                  USES kick_WD tcp_socket process_tcp_out 
+tcp_close                 USES tcp_socket _LINC tcp_newstate tcp_sendcontrol 
+tcp_getstate              USES tcp_socket 
+tcp_checksend             USES tcp_socket 
+tcp_abort                 USES tcp_socket _CASE_DIRECT_BYTE tcp_sendcontrol 
+                                tcp_newstate 
+tcp_poll                  USES handle.1 tcp_socket _CASE_CHECKED tcp_poll 
+                                tcp_newstate init_timer _LINC check_timer _LCMP 
+                                tcp_sendcontrol 
+tcp_init                  USES tcp_socket init_timer get_timer 
+process_tcp_in            USES NE64InitializeOffsetToReadRxBuffer tcp_check_cs 
+                                process_tcp_in received_tcp_packet NE64ReadByte tcp_mapsocket 
+                                tcp_sendreset tcp_socket _CASE_CHECKED _LCMP_P tcp_newstate 
+                                tcp_initseq _LINC tcp_sendcontrol NE64ReadWord 
+process_tcp_out           USES tcp_socket process_tcp_out localmachine 
+                                ip_checksum ip_checksum_buf process_ip_out 
+tcp_sendcontrol           USES kick_WD tcp_tempbuf process_tcp_out 
+tcp_sendreset             USES tcp_socket _LINC tcp_sendcontrol 
+tcp_initseq               USES base_timer 
+tcp_mapsocket             USES tcp_socket 
+tcp_newstate              USES init_timer 
+tcp_check_cs              USES ip_checksum tcp_tempbuf NE64ReadBytes 
+                                ip_checksum_buf NE64ReadByte 
+process_arp               USES NE64InitializeOffsetToReadRxBuffer NE64ReadByte 
+                                arp_send_response arp_get_response 
+arp_send_response         USES arp_send_response NE64ReadByte localmachine 
+                                NE64InitializeTransmissionBuffer send_frame NE64WriteEthernetHeaderToTxBuffer 
+                                NE64StartFrameTransmission arp_add NE64WriteByte 
+arp_get_response          USES NE64ReadByte arp_get_response localmachine 
+                                arp_table 
+arp_send_req              USES arp_table NE64InitializeTransmissionBuffer 
+                                send_frame localmachine NE64WriteEthernetHeaderToTxBuffer 
+                                NE64StartFrameTransmission NE64WriteByte 
+arp_alloc                 USES arp_table aenext.1 
+arp_add                   USES arp_add localmachine is_subnet arp_alloc 
+                                arp_table 
+arp_find                  USES arp_find is_subnet arp_alloc arp_send_req 
+                                arp_table 
+arp_manage                USES arp_timer check_timer _LCMP init_timer aenext.2 
+                                arp_table arp_send_req 
+arp_init                  USES arp_table get_timer arp_timer init_timer 
+process_ip_in             USES NE64InitializeOffsetToReadRxBuffer 
+                                process_ip_in received_ip_packet NE64ReadWord localmachine 
+                                ip_check_cs arp_add NE64ReadByte 
+process_ip_out            USES localmachine arp_find process_ip_out 
+                                NE64InitializeTransmissionBuffer send_frame NE64WriteEthernetHeaderToTxBuffer 
+                                send_ip_packet ip_id ip_construct_cs NE64WriteWord 
+                                NE64WriteBytes NE64StartFrameTransmission NE64WriteByte 
+ip_construct_cs           USES ip_checksum 
+ip_check_cs               USES ip_checksum 
+ip_checksum_buf           USES ip_checksum 
+EtherInit                 USES gotlink _EPHYCTL1 _EPHYCTL0 _DDRL _PTL 
+                                localmachine EtherOpen _IMASK MIIwrite MIIread 
+MIIwrite                  USES _MCMST _MPADR _MRADR _MWDATA _IEVENT MIIread 
+MIIread                   USES _MCMST _MPADR _MRADR _IEVENT _MRDATA 
+EtherOpen                 USES _MACAD2 _SWRST _MCMST _BUFCFG EtherType _RXCTS 
+                                EmacControl EmacEnable 
+EmacEnable                USES _NETCTL 
+EmacControl               USES _NETCTL 
+EtherType                 USES _ETCTL _ETYPE 
+EtherStartFrameTransmission USES _TXEFP _TXCTS 
+UseSWLedRun               USES LEDcounter _PTL 
+https_init                USES https https_eventlistener tcp_getsocket kick_WD 
+                                tcp_listen https_enabled 
+https_run                 USES https_enabled kick_WD ses.1 https_run 
+                                tcp_getstate tcp_listen https tcp_close tcp_abort net_buf 
+                                https_loadbuffer tcp_send https_deletesession 
+https_eventlistener       USES https_enabled https_searchsession 
+                                https_eventlistener _CASE_SEARCH_8 https_bindsession 
+                                https_deletesession https_activatesession https NE64ReadByte 
+                                _ILSEXT https_findfile net_buf https_loadbuffer 
+                                tcp_send 
+https_deletesession       USES https 
+https_searchsession       USES https 
+https_bindsession         USES https 
+https_activatesession     USES https 
+udp_init                  USES udp_socket 
+udp_getsocket             USES _FPCMP udp_socket 
+udp_open                  USES udp_getfreeport udp_socket 
+udp_send                  USES udp_socket udp_send localmachine ip_checksum 
+                                ip_checksum_buf process_ip_out 
+process_udp_in            USES NE64InitializeOffsetToReadRxBuffer NE64ReadWord 
+                                received_udp_packet udp_socket process_udp_in ip_checksum 
+                                NE64ReadByte 
+udp_getfreeport           USES lastport.1 udp_socket 
+https_findfile            USES FAT_HEADER_ID strlen flash_read_buffer strncmp 
+                                NE64ReadByte _LINC _LCMP_P STRING.index.html.2 strcpy 
+                                strcmp https https_not_found_page 
+https_loadbuffer          USES https_loadbuffer https kick_WD 
+                                https_not_found_page _LINC _LCMP_P flash_read_buffer 
+tftps_init                USES tftpsapp_init tftps_eventlistener udp_getsocket 
+                                tftps udp_open get_timer 
+tftps_run                 USES tftpsapp_init tftps check_timer _LCMP 
+                                tftps_deletesocket 
+tftp_callback_write       USES tftp_addr _LINC NE64ReadByte 
+tftps_eventlistener       USES tftpsapp_init tftps_eventlistener tftps 
+                                NE64InitializeOffsetToReadRxBuffer _CASE_CHECKED init_timer tftp_addr 
+                                flash_bulk_erase tftp_callback_write flash_program 
+                                tftps_sendack tftps_deletesocket tftps_senderror 
+                                NE64ReadByte 
+tftps_sendack             USES net_buf tftps udp_send 
+tftps_senderror           USES net_buf tftps udp_send 
+tftps_deletesocket        USES tftps 
+NE64InitializeOffsetToReadRxBuffer USES pCurrentMBuf 
+NE64ReadByte              USES pCurrentMBuf 
+NE64ReadWord              USES pCurrentMBuf 
+NE64ReadBytes             USES pCurrentMBuf memcpy 
+NE64InitializeTransmissionBuffer USES mBufTx pCurrentSendMBuf emacFIFOtx 
+NE64WriteEthernetHeaderToTxBuffer USES NE64WriteByte 
+NE64StartFrameTransmission USES EtherStartFrameTransmission 
+NE64WriteByte             USES pCurrentSendMBuf 
+NE64WriteWord             USES pCurrentSendMBuf 
+NE64WriteBytes            USES pCurrentSendMBuf memcpy 
+NE64Receive               USES _IMASK mENQUEUE 
+NE64ValidFrameReception   USES mDEQUEUE pCurrentMBuf 
+NE64FreeReceiveBuffer     USES pCurrentMBuf _IEVENT _IMASK 
+process_icmp_in           USES process_icmp_in 
+                                NE64InitializeOffsetToReadRxBuffer NE64ReadBytes ip_checksum_buf NE64ReadByte 
+                                ip_checksum localmachine net_buf process_ip_out 
+timer_pool_init           USES timer_pool 
+get_timer                 USES timer_pool 
+init_timer                USES timer_pool os_enter_critical_section 
+                                os_exit_critical_section 
+check_timer               USES timer_pool 
+decrement_timers          USES timer_pool _LDEC 
+mBufInit                  USES mBufs mBufTx enq_index deq_index 
+mENQUEUE                  USES enq_index mBufs 
+mDEQUEUE                  USES deq_index mBufs received_frame memcpy 
+Init                      USES _startupData 
+RTI_Init                  USES _CRGINT _RTICTL 
+RTI_Enable                USES _CRGFLG _CRGINT 
+main                      USES _CLKSEL _PLLCTL _SYNR _REFDV _CRGFLG _INTCR 
+                                init RTI_Init AK_HCS12NE_Init _PTG hard_addr 
+                                eeprom_write_buffer prot_addr netw_mask dfgw_addr _PTT 
+                                localmachine eeprom_read_buffer timer_pool_init mBufInit 
+                                EtherInit arp_init udp_init tcp_init https_init 
+                                tftps_init tcp_control_panel_init udp_control_panel_init 
+                                RTI_Enable main UseSWLedRun gotlink 
+                                NE64ValidFrameReception received_frame process_arp process_ip_in 
+                                received_ip_packet process_icmp_in process_udp_in process_tcp_in 
+                                NE64FreeReceiveBuffer arp_manage tcp_poll https_run tftps_run 
+                                udp_control_panel_run 
+init_serial_memories      USES _SPICR1 _SPICR2 _SPIBR _PTS _DDRS _PTL _DDRL 
+                                eeprom_unlock 
+flash_spi                 USES _SPISR _SPIDR 
+flash_wre                 USES _PTS flash_spi 
+flash_wait_WIP            USES _PTS flash_spi kick_WD 
+flash_bulk_erase          USES flash_wre _PTS flash_spi flash_wait_WIP 
+flash_program             USES flash_wre _PTS flash_spi kick_WD _LINC 
+                                flash_wait_WIP 
+flash_read                USES _PTS kick_WD _LINC flash_spi 
+flash_read_buffer         USES _PTS kick_WD flash_spi 
+eeprom_spi                USES _SPISR _SPIDR 
+eeprom_wre                USES _PTL eeprom_spi 
+eeprom_wait_WIP           USES _PTL eeprom_spi kick_WD 
+eeprom_unlock             USES _SPIBR eeprom_wre _PTL eeprom_spi 
+                                eeprom_wait_WIP 
+eeprom_read_buffer        USES _SPIBR _PTL eeprom_spi kick_WD 
+eeprom_write_buffer       USES _SPIBR eeprom_wre _PTL eeprom_spi kick_WD 
+                                eeprom_wait_WIP 
+AK_HCS12NE_Init           USES _PORTAB _DDRAB _PERG _PPSG _PERH _PPSH 
+                                _ATDCTL23 _ATDCTL45 _PORTK _DDRK _PTT _DDRT _TIOS _OC7M 
+                                _TTOV _TCTL1 _TSCR2 _TC7 _TC4 _TC5 _TCNT _TSCR1 
+                                init_serial_memories 
+AdcRead                   USES _ATDCTL45 _ATDSTAT1 _ATDDR0 
+ReadTemperature           USES AdcRead lookup_NTC 
+SetSpeakerParameters      USES SpeakerOn SpeakerCount _TIE 
+SetMotorParameters        USES MotorRunning _PORTK MotorSpeed _LDIVU 
+                                MotorDirection _TC4 kick_WD _TC5 
+send_ack_data             USES udp_tcp_buf 
+send_nack                 USES udp_tcp_buf strcpy 
+send_bool_data            USES udp_tcp_buf 
+send_dec_data             USES send_dec_data tab_dec udp_tcp_buf 
+get_8bit_data             USES ptr_cmdbuf STRING.ERR.DATA...1 send_nack 
+get_bool_data             USES get_8bit_data STRING.ERR.DATA...1 send_nack 
+cmd_sld                   USES get_8bit_data get_bool_data _BSHL _PORTAB 
+                                send_ack_data 
+cmd_gld                   USES get_8bit_data _BSHL _PORTAB send_bool_data 
+cmd_gsw                   USES get_8bit_data _PTG _PTH _BSHL send_bool_data 
+cmd_gpt                   USES AdcRead send_dec_data 
+cmd_gpb                   USES get_8bit_data _PTG _BSHL send_bool_data 
+cmd_gtp                   USES ReadTemperature send_dec_data 
+cmd_gms                   USES MotorSpeed send_dec_data 
+cmd_sms                   USES MotorSpeed get_8bit_data SetMotorParameters 
+                                send_ack_data 
+cmd_gmd                   USES MotorDirection send_bool_data 
+cmd_smd                   USES MotorDirection get_bool_data SetMotorParameters 
+                                send_ack_data 
+cmd_gme                   USES MotorRunning send_bool_data 
+cmd_sme                   USES MotorRunning get_bool_data SetMotorParameters 
+                                send_ack_data 
+cmd_gmc                   USES AdcRead _LDIVU _LMUL send_dec_data 
+cmd_gmf                   USES _PORTK MotorRunning send_bool_data 
+cmd_gso                   USES SpeakerOn send_bool_data 
+cmd_sso                   USES SpeakerOn get_bool_data SetSpeakerParameters 
+                                send_ack_data 
+cmd_gsf                   USES SpeakerFreq send_dec_data 
+cmd_ssf                   USES get_8bit_data SpeakerFreq SetSpeakerParameters 
+                                send_ack_data 
+flash_callback_read       USES flash_data 
+cmd_rsf                   USES get_8bit_data flash_callback_read flash_read 
+                                flash_data send_dec_data 
+flash_callback_write      USES flash_data 
+cmd_wsf                   USES get_8bit_data flash_data flash_callback_write 
+                                flash_program send_ack_data 
+cmd_esf                   USES flash_bulk_erase send_ack_data 
+cmd_rse                   USES get_8bit_data eeprom_read_buffer send_dec_data 
+cmd_wse                   USES get_8bit_data eeprom_write_buffer send_ack_data 
+decod_commands            USES STRING.ERR.SYNTAX...25 send_nack NE64ReadByte 
+                                _LCMP_P table_cmd STRING.ERR.CMD...26 strncmp 
+                                ptr_cmdbuf 
+tcp_send_buffer           USES tcp_soch tcp_checksend udp_tcp_buf net_buf 
+                                tcp_send 
+tcp_control_panel_init    USES tcp_control_panel_eventlistener tcp_getsocket 
+                                tcp_soch tcp_listen 
+tcp_control_panel_eventlistener USES tcp_soch _CASE_DIRECT_BYTE 
+                                _CASE_SEARCH_8_BYTE decod_commands tcp_send_buffer 
+udp_send_buffer           USES udp_tcp_buf net_buf udp_soch udp_ipaddr 
+                                udp_port udp_send 
+udp_control_panel_init    USES udp_control_panel_eventlistener udp_getsocket 
+                                udp_soch udp_open 
+udp_control_panel_eventlistener USES udp_soch udp_ipaddr udp_port 
+                                decod_commands udp_data_to_send 
+udp_control_panel_run     USES udp_data_to_send udp_send_buffer 
+                                _CASE_CHECKED_BYTE 
+
+*********************************************************************************************
+DEPENDENCY TREE
+*********************************************************************************************
+ main and _Startup Group
+ | 
+ +- main                
+ |  | 
+ |  +- init                
+ |  |    
+ |  +- RTI_Init            
+ |  |    
+ |  +- AK_HCS12NE_Init     
+ |  |  | 
+ |  |  +- init_serial_memories
+ |  |     | 
+ |  |     +- eeprom_unlock       
+ |  |        | 
+ |  |        +- eeprom_wre          
+ |  |        |  | 
+ |  |        |  +- eeprom_spi          
+ |  |        |       
+ |  |        +- eeprom_spi           (see above)
+ |  |        |  
+ |  |        +- eeprom_wait_WIP     
+ |  |           | 
+ |  |           +- eeprom_spi           (see above)
+ |  |           |  
+ |  |           +- kick_WD             
+ |  |                
+ |  +- eeprom_write_buffer 
+ |  |  | 
+ |  |  +- eeprom_wre           (see above)
+ |  |  |  
+ |  |  +- eeprom_spi           (see above)
+ |  |  |  
+ |  |  +- kick_WD              (see above)
+ |  |  |  
+ |  |  +- eeprom_wait_WIP      (see above)
+ |  |     
+ |  +- eeprom_read_buffer  
+ |  |  | 
+ |  |  +- eeprom_spi           (see above)
+ |  |  |  
+ |  |  +- kick_WD              (see above)
+ |  |     
+ |  +- timer_pool_init     
+ |  |    
+ |  +- mBufInit            
+ |  |    
+ |  +- EtherInit           
+ |  |  | 
+ |  |  +- EtherOpen           
+ |  |  |  | 
+ |  |  |  +- EtherType           
+ |  |  |  |    
+ |  |  |  +- EmacControl         
+ |  |  |  |    
+ |  |  |  +- EmacEnable          
+ |  |  |       
+ |  |  +- MIIwrite            
+ |  |  |  | 
+ |  |  |  +- MIIread             
+ |  |  |       
+ |  |  +- MIIread              (see above)
+ |  |     
+ |  +- arp_init            
+ |  |  | 
+ |  |  +- get_timer           
+ |  |  |    
+ |  |  +- init_timer          
+ |  |     | 
+ |  |     +- os_enter_critical_section
+ |  |     |    
+ |  |     +- os_exit_critical_section
+ |  |          
+ |  +- udp_init            
+ |  |    
+ |  +- tcp_init            
+ |  |  | 
+ |  |  +- init_timer           (see above)
+ |  |  |  
+ |  |  +- get_timer            (see above)
+ |  |     
+ |  +- https_init          
+ |  |  | 
+ |  |  +- https_eventlistener 
+ |  |  |  | 
+ |  |  |  +- https_searchsession 
+ |  |  |  |    
+ |  |  |  +- _CASE_SEARCH_8      
+ |  |  |  |    
+ |  |  |  +- https_bindsession   
+ |  |  |  |    
+ |  |  |  +- https_deletesession 
+ |  |  |  |    
+ |  |  |  +- https_activatesession
+ |  |  |  |    
+ |  |  |  +- NE64ReadByte        
+ |  |  |  |    
+ |  |  |  +- _ILSEXT             
+ |  |  |  |    
+ |  |  |  +- https_findfile      
+ |  |  |  |  | 
+ |  |  |  |  +- strlen              
+ |  |  |  |  |    
+ |  |  |  |  +- flash_read_buffer   
+ |  |  |  |  |  | 
+ |  |  |  |  |  +- kick_WD              (see above)
+ |  |  |  |  |  |  
+ |  |  |  |  |  +- flash_spi           
+ |  |  |  |  |       
+ |  |  |  |  +- strncmp             
+ |  |  |  |  |    
+ |  |  |  |  +- NE64ReadByte         (see above)
+ |  |  |  |  |  
+ |  |  |  |  +- _LINC               
+ |  |  |  |  |    
+ |  |  |  |  +- _LCMP_P             
+ |  |  |  |  |    
+ |  |  |  |  +- strcpy              
+ |  |  |  |  |    
+ |  |  |  |  +- strcmp              
+ |  |  |  |       
+ |  |  |  +- https_loadbuffer    
+ |  |  |  |  | 
+ |  |  |  |  +- kick_WD              (see above)
+ |  |  |  |  |  
+ |  |  |  |  +- _LINC                (see above)
+ |  |  |  |  |  
+ |  |  |  |  +- _LCMP_P              (see above)
+ |  |  |  |  |  
+ |  |  |  |  +- flash_read_buffer    (see above)
+ |  |  |  |     
+ |  |  |  +- tcp_send            
+ |  |  |     | 
+ |  |  |     +- kick_WD              (see above)
+ |  |  |     |  
+ |  |  |     +- process_tcp_out     
+ |  |  |        | 
+ |  |  |        +- ip_checksum         
+ |  |  |        |    
+ |  |  |        +- ip_checksum_buf     
+ |  |  |        |  | 
+ |  |  |        |  +- ip_checksum          (see above)
+ |  |  |        |     
+ |  |  |        +- process_ip_out      
+ |  |  |           | 
+ |  |  |           +- arp_find            
+ |  |  |           |  | 
+ |  |  |           |  +- is_subnet           
+ |  |  |           |  |    
+ |  |  |           |  +- arp_alloc           
+ |  |  |           |  |    
+ |  |  |           |  +- arp_send_req        
+ |  |  |           |     | 
+ |  |  |           |     +- NE64InitializeTransmissionBuffer
+ |  |  |           |     |    
+ |  |  |           |     +- NE64WriteEthernetHeaderToTxBuffer
+ |  |  |           |     |  | 
+ |  |  |           |     |  +- NE64WriteByte       
+ |  |  |           |     |       
+ |  |  |           |     +- NE64StartFrameTransmission
+ |  |  |           |     |  | 
+ |  |  |           |     |  +- EtherStartFrameTransmission
+ |  |  |           |     |       
+ |  |  |           |     +- NE64WriteByte        (see above)
+ |  |  |           |        
+ |  |  |           +- NE64InitializeTransmissionBuffer (see above)
+ |  |  |           |  
+ |  |  |           +- NE64WriteEthernetHeaderToTxBuffer (see above)
+ |  |  |           |  
+ |  |  |           +- ip_construct_cs     
+ |  |  |           |  | 
+ |  |  |           |  +- ip_checksum          (see above)
+ |  |  |           |     
+ |  |  |           +- NE64WriteWord       
+ |  |  |           |    
+ |  |  |           +- NE64WriteBytes      
+ |  |  |           |  | 
+ |  |  |           |  +- memcpy              
+ |  |  |           |       
+ |  |  |           +- NE64StartFrameTransmission (see above)
+ |  |  |           |  
+ |  |  |           +- NE64WriteByte        (see above)
+ |  |  |              
+ |  |  +- tcp_getsocket       
+ |  |  |  | 
+ |  |  |  +- _FPCMP              
+ |  |  |       
+ |  |  +- kick_WD              (see above)
+ |  |  |  
+ |  |  +- tcp_listen          
+ |  |     | 
+ |  |     +- _FPCMP               (see above)
+ |  |        
+ |  +- tftps_init          
+ |  |  | 
+ |  |  +- tftps_eventlistener 
+ |  |  |  | 
+ |  |  |  +- NE64InitializeOffsetToReadRxBuffer
+ |  |  |  |    
+ |  |  |  +- _CASE_CHECKED       
+ |  |  |  |    
+ |  |  |  +- init_timer           (see above)
+ |  |  |  |  
+ |  |  |  +- flash_bulk_erase    
+ |  |  |  |  | 
+ |  |  |  |  +- flash_wre           
+ |  |  |  |  |  | 
+ |  |  |  |  |  +- flash_spi            (see above)
+ |  |  |  |  |     
+ |  |  |  |  +- flash_spi            (see above)
+ |  |  |  |  |  
+ |  |  |  |  +- flash_wait_WIP      
+ |  |  |  |     | 
+ |  |  |  |     +- flash_spi            (see above)
+ |  |  |  |     |  
+ |  |  |  |     +- kick_WD              (see above)
+ |  |  |  |        
+ |  |  |  +- tftp_callback_write 
+ |  |  |  |  | 
+ |  |  |  |  +- _LINC                (see above)
+ |  |  |  |  |  
+ |  |  |  |  +- NE64ReadByte         (see above)
+ |  |  |  |     
+ |  |  |  +- flash_program       
+ |  |  |  |  | 
+ |  |  |  |  +- flash_wre            (see above)
+ |  |  |  |  |  
+ |  |  |  |  +- flash_spi            (see above)
+ |  |  |  |  |  
+ |  |  |  |  +- kick_WD              (see above)
+ |  |  |  |  |  
+ |  |  |  |  +- _LINC                (see above)
+ |  |  |  |  |  
+ |  |  |  |  +- flash_wait_WIP       (see above)
+ |  |  |  |     
+ |  |  |  +- tftps_sendack       
+ |  |  |  |  | 
+ |  |  |  |  +- udp_send            
+ |  |  |  |     | 
+ |  |  |  |     +- ip_checksum          (see above)
+ |  |  |  |     |  
+ |  |  |  |     +- ip_checksum_buf      (see above)
+ |  |  |  |     |  
+ |  |  |  |     +- process_ip_out       (see above)
+ |  |  |  |        
+ |  |  |  +- tftps_deletesocket  
+ |  |  |  |    
+ |  |  |  +- tftps_senderror     
+ |  |  |  |  | 
+ |  |  |  |  +- udp_send             (see above)
+ |  |  |  |     
+ |  |  |  +- NE64ReadByte         (see above)
+ |  |  |     
+ |  |  +- udp_getsocket       
+ |  |  |  | 
+ |  |  |  +- _FPCMP               (see above)
+ |  |  |     
+ |  |  +- udp_open            
+ |  |  |  | 
+ |  |  |  +- udp_getfreeport     
+ |  |  |       
+ |  |  +- get_timer            (see above)
+ |  |     
+ |  +- tcp_control_panel_init
+ |  |  | 
+ |  |  +- tcp_control_panel_eventlistener
+ |  |  |  | 
+ |  |  |  +- _CASE_DIRECT_BYTE   
+ |  |  |  |    
+ |  |  |  +- _CASE_SEARCH_8_BYTE 
+ |  |  |  |    
+ |  |  |  +- decod_commands      
+ |  |  |  |  | 
+ |  |  |  |  +- send_nack           
+ |  |  |  |  |  | 
+ |  |  |  |  |  +- strcpy               (see above)
+ |  |  |  |  |     
+ |  |  |  |  +- NE64ReadByte         (see above)
+ |  |  |  |  |  
+ |  |  |  |  +- _LCMP_P              (see above)
+ |  |  |  |  |  
+ |  |  |  |  +- table_cmd           
+ |  |  |  |  |  | 
+ |  |  |  |  |  +- cmd_sld             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- get_8bit_data       
+ |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  +- send_nack            (see above)
+ |  |  |  |  |  |  |     
+ |  |  |  |  |  |  +- get_bool_data       
+ |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  +- get_8bit_data        (see above)
+ |  |  |  |  |  |  |  |  
+ |  |  |  |  |  |  |  +- send_nack            (see above)
+ |  |  |  |  |  |  |     
+ |  |  |  |  |  |  +- _BSHL               
+ |  |  |  |  |  |  |    
+ |  |  |  |  |  |  +- send_ack_data       
+ |  |  |  |  |  |       
+ |  |  |  |  |  +- cmd_gld             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- get_8bit_data        (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- _BSHL                (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- send_bool_data      
+ |  |  |  |  |  |       
+ |  |  |  |  |  +- cmd_gsw             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- get_8bit_data        (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- _BSHL                (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- send_bool_data       (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_gpt             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- AdcRead             
+ |  |  |  |  |  |  |    
+ |  |  |  |  |  |  +- send_dec_data       
+ |  |  |  |  |  |       
+ |  |  |  |  |  +- cmd_gpb             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- get_8bit_data        (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- _BSHL                (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- send_bool_data       (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_gtp             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- ReadTemperature     
+ |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  +- AdcRead              (see above)
+ |  |  |  |  |  |  |     
+ |  |  |  |  |  |  +- send_dec_data        (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_gms             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- send_dec_data        (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_sms             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- get_8bit_data        (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- SetMotorParameters  
+ |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  +- _LDIVU              
+ |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  +- _lDivMod            
+ |  |  |  |  |  |  |  |       
+ |  |  |  |  |  |  |  +- kick_WD              (see above)
+ |  |  |  |  |  |  |     
+ |  |  |  |  |  |  +- send_ack_data        (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_gmd             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- send_bool_data       (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_smd             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- get_bool_data        (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- SetMotorParameters   (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- send_ack_data        (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_gme             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- send_bool_data       (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_sme             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- get_bool_data        (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- SetMotorParameters   (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- send_ack_data        (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_gmc             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- AdcRead              (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- _LDIVU               (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- _LMUL               
+ |  |  |  |  |  |  |    
+ |  |  |  |  |  |  +- send_dec_data        (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_gmf             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- send_bool_data       (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_sso             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- get_bool_data        (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- SetSpeakerParameters
+ |  |  |  |  |  |  |    
+ |  |  |  |  |  |  +- send_ack_data        (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_gso             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- send_bool_data       (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_ssf             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- get_8bit_data        (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- SetSpeakerParameters (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- send_ack_data        (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_gsf             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- send_dec_data        (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_rsf             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- get_8bit_data        (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- flash_callback_read 
+ |  |  |  |  |  |  |    
+ |  |  |  |  |  |  +- flash_read          
+ |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  +- kick_WD              (see above)
+ |  |  |  |  |  |  |  |  
+ |  |  |  |  |  |  |  +- _LINC                (see above)
+ |  |  |  |  |  |  |  |  
+ |  |  |  |  |  |  |  +- flash_spi            (see above)
+ |  |  |  |  |  |  |     
+ |  |  |  |  |  |  +- send_dec_data        (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_wsf             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- get_8bit_data        (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- flash_callback_write
+ |  |  |  |  |  |  |    
+ |  |  |  |  |  |  +- flash_program        (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- send_ack_data        (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_esf             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- flash_bulk_erase     (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- send_ack_data        (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_rse             
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  +- get_8bit_data        (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- eeprom_read_buffer   (see above)
+ |  |  |  |  |  |  |  
+ |  |  |  |  |  |  +- send_dec_data        (see above)
+ |  |  |  |  |  |     
+ |  |  |  |  |  +- cmd_wse             
+ |  |  |  |  |     | 
+ |  |  |  |  |     +- get_8bit_data        (see above)
+ |  |  |  |  |     |  
+ |  |  |  |  |     +- eeprom_write_buffer  (see above)
+ |  |  |  |  |     |  
+ |  |  |  |  |     +- send_ack_data        (see above)
+ |  |  |  |  |        
+ |  |  |  |  +- strncmp              (see above)
+ |  |  |  |     
+ |  |  |  +- tcp_send_buffer     
+ |  |  |     | 
+ |  |  |     +- tcp_checksend       
+ |  |  |     |    
+ |  |  |     +- tcp_send             (see above)
+ |  |  |        
+ |  |  +- tcp_getsocket        (see above)
+ |  |  |  
+ |  |  +- tcp_listen           (see above)
+ |  |     
+ |  +- udp_control_panel_init
+ |  |  | 
+ |  |  +- udp_control_panel_eventlistener
+ |  |  |  | 
+ |  |  |  +- decod_commands       (see above)
+ |  |  |     
+ |  |  +- udp_getsocket        (see above)
+ |  |  |  
+ |  |  +- udp_open             (see above)
+ |  |     
+ |  +- RTI_Enable          
+ |  |    
+ |  +- UseSWLedRun         
+ |  |    
+ |  +- NE64ValidFrameReception
+ |  |  | 
+ |  |  +- mDEQUEUE            
+ |  |     | 
+ |  |     +- memcpy               (see above)
+ |  |        
+ |  +- process_arp         
+ |  |  | 
+ |  |  +- NE64InitializeOffsetToReadRxBuffer (see above)
+ |  |  |  
+ |  |  +- NE64ReadByte         (see above)
+ |  |  |  
+ |  |  +- arp_send_response   
+ |  |  |  | 
+ |  |  |  +- NE64ReadByte         (see above)
+ |  |  |  |  
+ |  |  |  +- NE64InitializeTransmissionBuffer (see above)
+ |  |  |  |  
+ |  |  |  +- NE64WriteEthernetHeaderToTxBuffer (see above)
+ |  |  |  |  
+ |  |  |  +- NE64StartFrameTransmission (see above)
+ |  |  |  |  
+ |  |  |  +- arp_add             
+ |  |  |  |  | 
+ |  |  |  |  +- is_subnet            (see above)
+ |  |  |  |  |  
+ |  |  |  |  +- arp_alloc            (see above)
+ |  |  |  |     
+ |  |  |  +- NE64WriteByte        (see above)
+ |  |  |     
+ |  |  +- arp_get_response    
+ |  |     | 
+ |  |     +- NE64ReadByte         (see above)
+ |  |        
+ |  +- process_ip_in       
+ |  |  | 
+ |  |  +- NE64InitializeOffsetToReadRxBuffer (see above)
+ |  |  |  
+ |  |  +- NE64ReadWord        
+ |  |  |    
+ |  |  +- ip_check_cs         
+ |  |  |  | 
+ |  |  |  +- ip_checksum          (see above)
+ |  |  |     
+ |  |  +- arp_add              (see above)
+ |  |  |  
+ |  |  +- NE64ReadByte         (see above)
+ |  |     
+ |  +- process_icmp_in     
+ |  |  | 
+ |  |  +- NE64InitializeOffsetToReadRxBuffer (see above)
+ |  |  |  
+ |  |  +- NE64ReadBytes       
+ |  |  |  | 
+ |  |  |  +- memcpy               (see above)
+ |  |  |     
+ |  |  +- ip_checksum_buf      (see above)
+ |  |  |  
+ |  |  +- NE64ReadByte         (see above)
+ |  |  |  
+ |  |  +- ip_checksum          (see above)
+ |  |  |  
+ |  |  +- process_ip_out       (see above)
+ |  |     
+ |  +- process_udp_in      
+ |  |  | 
+ |  |  +- NE64InitializeOffsetToReadRxBuffer (see above)
+ |  |  |  
+ |  |  +- NE64ReadWord         (see above)
+ |  |  |  
+ |  |  +- ip_checksum          (see above)
+ |  |  |  
+ |  |  +- NE64ReadByte         (see above)
+ |  |     
+ |  +- process_tcp_in      
+ |  |  | 
+ |  |  +- NE64InitializeOffsetToReadRxBuffer (see above)
+ |  |  |  
+ |  |  +- tcp_check_cs        
+ |  |  |  | 
+ |  |  |  +- ip_checksum          (see above)
+ |  |  |  |  
+ |  |  |  +- NE64ReadBytes        (see above)
+ |  |  |  |  
+ |  |  |  +- ip_checksum_buf      (see above)
+ |  |  |  |  
+ |  |  |  +- NE64ReadByte         (see above)
+ |  |  |     
+ |  |  +- NE64ReadByte         (see above)
+ |  |  |  
+ |  |  +- tcp_mapsocket       
+ |  |  |    
+ |  |  +- tcp_sendreset       
+ |  |  |  | 
+ |  |  |  +- _LINC                (see above)
+ |  |  |  |  
+ |  |  |  +- tcp_sendcontrol     
+ |  |  |     | 
+ |  |  |     +- kick_WD              (see above)
+ |  |  |     |  
+ |  |  |     +- process_tcp_out      (see above)
+ |  |  |        
+ |  |  +- _CASE_CHECKED        (see above)
+ |  |  |  
+ |  |  +- _LCMP_P              (see above)
+ |  |  |  
+ |  |  +- tcp_newstate        
+ |  |  |  | 
+ |  |  |  +- init_timer           (see above)
+ |  |  |     
+ |  |  +- tcp_initseq         
+ |  |  |    
+ |  |  +- _LINC                (see above)
+ |  |  |  
+ |  |  +- tcp_sendcontrol      (see above)
+ |  |  |  
+ |  |  +- NE64ReadWord         (see above)
+ |  |     
+ |  +- NE64FreeReceiveBuffer
+ |  |    
+ |  +- arp_manage          
+ |  |  | 
+ |  |  +- check_timer         
+ |  |  |    
+ |  |  +- _LCMP               
+ |  |  |    
+ |  |  +- init_timer           (see above)
+ |  |  |  
+ |  |  +- arp_send_req         (see above)
+ |  |     
+ |  +- tcp_poll            
+ |  |  | 
+ |  |  +- _CASE_CHECKED        (see above)
+ |  |  |  
+ |  |  +- tcp_newstate         (see above)
+ |  |  |  
+ |  |  +- init_timer           (see above)
+ |  |  |  
+ |  |  +- _LINC                (see above)
+ |  |  |  
+ |  |  +- check_timer          (see above)
+ |  |  |  
+ |  |  +- _LCMP                (see above)
+ |  |  |  
+ |  |  +- tcp_sendcontrol      (see above)
+ |  |     
+ |  +- https_run           
+ |  |  | 
+ |  |  +- kick_WD              (see above)
+ |  |  |  
+ |  |  +- tcp_getstate        
+ |  |  |    
+ |  |  +- tcp_listen           (see above)
+ |  |  |  
+ |  |  +- tcp_close           
+ |  |  |  | 
+ |  |  |  +- _LINC                (see above)
+ |  |  |  |  
+ |  |  |  +- tcp_newstate         (see above)
+ |  |  |  |  
+ |  |  |  +- tcp_sendcontrol      (see above)
+ |  |  |     
+ |  |  +- tcp_abort           
+ |  |  |  | 
+ |  |  |  +- _CASE_DIRECT_BYTE    (see above)
+ |  |  |  |  
+ |  |  |  +- tcp_sendcontrol      (see above)
+ |  |  |  |  
+ |  |  |  +- tcp_newstate         (see above)
+ |  |  |     
+ |  |  +- https_loadbuffer     (see above)
+ |  |  |  
+ |  |  +- tcp_send             (see above)
+ |  |  |  
+ |  |  +- https_deletesession  (see above)
+ |  |     
+ |  +- tftps_run           
+ |  |  | 
+ |  |  +- check_timer          (see above)
+ |  |  |  
+ |  |  +- _LCMP                (see above)
+ |  |  |  
+ |  |  +- tftps_deletesocket   (see above)
+ |  |     
+ |  +- udp_control_panel_run
+ |     | 
+ |     +- udp_send_buffer     
+ |     |  | 
+ |     |  +- udp_send             (see above)
+ |     |     
+ |     +- _CASE_CHECKED_BYTE  
+ |          
+ +- _Startup            
+    | 
+    +- Init                
+         
+ _vect               
+ | 
+ +- software_trap       
+ |    
+ +- emac_ec_isr         
+ |    
+ +- emac_lc_isr         
+ |    
+ +- emac_b_rx_error_isr 
+ |    
+ +- emac_rx_b_b_o_isr   
+ |    
+ +- emac_rx_b_a_o_isr   
+ |    
+ +- emac_rx_error_isr   
+ |    
+ +- emac_mii_mtc_isr    
+ |    
+ +- emac_rx_fc_isr      
+ |    
+ +- emac_f_tx_c_isr     
+ |    
+ +- emac_rx_b_b_c_isr   
+ |  | 
+ |  +- NE64Receive         
+ |     | 
+ |     +- mENQUEUE            
+ |          
+ +- emac_rx_b_a_c_isr   
+ |  | 
+ |  +- NE64Receive          (see above)
+ |     
+ +- ephy_isr            
+ |  | 
+ |  +- MIIread              (see above)
+ |     
+ +- tim0_ch7_isr        
+ |    
+ +- RealTimeInterrupt   
+ |  | 
+ |  +- decrement_timers    
+ |     | 
+ |     +- _LDEC               
+ |          
+ +- _Startup             (see above)
+    
+*********************************************************************************************
+STATISTIC SECTION
+---------------------------------------------------------------------------------------------
+
+ExeFile:
+--------
+Number of blocks to be downloaded: 7
+Total size of all blocks to be downloaded: 18161
+

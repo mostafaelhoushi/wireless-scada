@@ -1,0 +1,8 @@
+bin\Debug\wSound.exe
+bin\Debug\wSound.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\wSound.Properties.Resources.resources
+obj\Debug\wSound.csproj.GenerateResource.Cache
+obj\Debug\wSound.exe
+obj\Debug\wSound.pdb
+obj\Debug\wSound.Form1.resources

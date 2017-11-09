@@ -1,0 +1,34 @@
+// Global Constants
+#define IDLE_MODE 0
+#define OPEN_LOOP_MODE 1
+#define CLOSED_LOOP_MODE 2
+
+#define OFF 0
+#define ON 1 
+
+
+// Global Variables
+struct PID {
+	char mode;
+	char input_channel;
+	char output_channel;
+
+	unsigned float SP;
+	
+	unsigned float Kp;
+	unsigned float Ki;
+	unsigned float Kd;
+	};
+
+struct ON_OFF {
+	char mode;
+	char input_channel;
+	char output_channel;
+
+	unsigned float SP;
+	
+	unsigned float neutral_zone;
+	}
+	
+struct PID PID_controllers[8];
+struct ON_OFF ON_OFF_controllers[8];
